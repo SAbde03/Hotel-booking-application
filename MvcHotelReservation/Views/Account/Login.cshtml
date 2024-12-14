@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<!-- Link the CSS file -->
+<link rel="stylesheet" href="~/css/login.css" />
+
+<div class="login-container">
+    <!-- Left: Form Section -->
+    <div class="login-form">
+        <form method="post" asp-controller="Account" asp-action="Login">
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <p class="error-message">@ViewBag.ErrorMessage</p>
+            }
+            <div>
+                <label for="Username">Username:</label>
+                <input type="text" id="Username" name="Username" placeholder="Enter your username" required />
+            </div>
+            <div>
+                <label for="Password">Password:</label>
+                <input type="password" id="Password" name="Password" placeholder="Enter your password" required />
+            </div>
+            <button type="submit">Login</button>
+            <p>
+                Don't have an account? <a href="/Account/SignUp">Sign up here</a>.
+            </p>
+        </form>
+    </div>
+
+    
+</div>

@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<link rel="stylesheet" href="~/css/login.css" /> <!-- Reuse the login styles -->
+
+<h2>Sign Up</h2>
+
+<form asp-action="SignUp" method="post">
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <p class="error-message">@ViewBag.ErrorMessage</p>
+    }
+    
+    <div>
+        <label for="Username">Username:</label>
+        <input type="text" id="Username" name="Username" placeholder="Enter your username" required />
+    </div>
+    <div>
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email" placeholder="Enter your email" required />
+    </div>
+    <div>
+        <label for="Password">Password:</label>
+        <input type="password" id="Password" name="Password" placeholder="Enter a password" required />
+    </div>
+    <div>
+        <label for="ConfirmPassword">Confirm Password:</label>
+        <input type="password" id="ConfirmPassword" name="ConfirmPassword" placeholder="Confirm your password" required />
+    </div>
+    <button type="submit">Sign Up</button>
+    <p>
+        I have already an account? <a href="/Account/Login">log in here</a>.
+    </p>
+</form>

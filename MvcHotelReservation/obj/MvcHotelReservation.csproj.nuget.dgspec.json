@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\EMSI\\Dot NET\\Projet DotNet\\MvcHotelReservation\\MvcHotelReservation\\MvcHotelReservation.csproj": {}
+    "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\MvcHotelReservation.csproj": {}
   },
   "projects": {
-    "D:\\EMSI\\Dot NET\\Projet DotNet\\MvcHotelReservation\\MvcHotelReservation\\MvcHotelReservation.csproj": {
+    "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\MvcHotelReservation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EMSI\\Dot NET\\Projet DotNet\\MvcHotelReservation\\MvcHotelReservation\\MvcHotelReservation.csproj",
+        "projectUniqueName": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\MvcHotelReservation.csproj",
         "projectName": "MvcHotelReservation",
-        "projectPath": "D:\\EMSI\\Dot NET\\Projet DotNet\\MvcHotelReservation\\MvcHotelReservation\\MvcHotelReservation.csproj",
-        "packagesPath": "C:\\Users\\Youssef\\.nuget\\packages\\",
-        "outputPath": "D:\\EMSI\\Dot NET\\Projet DotNet\\MvcHotelReservation\\MvcHotelReservation\\obj\\",
+        "projectPath": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\MvcHotelReservation.csproj",
+        "packagesPath": "C:\\Users\\golde\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Youssef\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\golde\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
