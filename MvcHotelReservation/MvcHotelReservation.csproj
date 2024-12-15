@@ -8,6 +8,12 @@
 
   <ItemGroup>
     <Folder Include="Views\Account\" />
+    <Folder Include="Views\Chambre\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\fonts\interstate-black-cond-58b642507872b.otf" />
+    <_ContentIncludedByDefault Remove="wwwroot\fonts\interstate-thin-italic-58b641b2d5a92.otf" />
   </ItemGroup>
 
 </Project>
