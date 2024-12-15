@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fkV5t08Gh2JW6JSWBjVeDqWwAv8Tm5C8YduyzHyxYjI=",
+  "Hash": "KgoEYDGeOAG32cf7UbLMcSpAzpSAcUtndeYXq//25kE=",
   "Source": "MvcHotelReservation",
   "BasePath": "_content/MvcHotelReservation",
   "Mode": "Default",
@@ -205,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\e1786e79b5287e0d6bca2104a8540e5a.ico",
+      "SourceId": "MvcHotelReservation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\",
+      "BasePath": "_content/MvcHotelReservation",
+      "RelativePath": "e1786e79b5287e0d6bca2104a8540e5a.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\e1786e79b5287e0d6bca2104a8540e5a.ico"
     },
     {
       "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\favicon.ico",
@@ -1497,6 +1516,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\MAR-5124f716.ico",
+      "SourceId": "MvcHotelReservation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\",
+      "BasePath": "_content/MvcHotelReservation",
+      "RelativePath": "MAR-5124f716.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MAR-5124f716.ico"
     }
   ]
 }

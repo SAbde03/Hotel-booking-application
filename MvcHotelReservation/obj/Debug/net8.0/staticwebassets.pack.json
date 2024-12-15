@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\JavaScript\\home.js"
     },
     {
+      "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\MAR-5124f716.ico",
+      "PackagePath": "staticwebassets\\MAR-5124f716.ico"
+    },
+    {
       "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\css\\fonts\\Poppins-Black.ttf",
       "PackagePath": "staticwebassets\\css\\fonts\\Poppins-Black.ttf"
     },
@@ -39,6 +43,10 @@
     {
       "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\e1786e79b5287e0d6bca2104a8540e5a.ico",
+      "PackagePath": "staticwebassets\\e1786e79b5287e0d6bca2104a8540e5a.ico"
     },
     {
       "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\favicon.ico",
