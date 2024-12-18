@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KgoEYDGeOAG32cf7UbLMcSpAzpSAcUtndeYXq//25kE=",
+  "Hash": "fiBrJa+S/W4iWqrumerDpGXj4MjjuZIUqruuGt2IBao=",
   "Source": "MvcHotelReservation",
   "BasePath": "_content/MvcHotelReservation",
   "Mode": "Default",
@@ -205,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\css\\Visualisation.css",
+      "SourceId": "MvcHotelReservation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\",
+      "BasePath": "_content/MvcHotelReservation",
+      "RelativePath": "css/Visualisation.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Visualisation.css"
     },
     {
       "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\e1786e79b5287e0d6bca2104a8540e5a.ico",

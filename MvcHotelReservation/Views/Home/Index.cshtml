@@ -26,8 +26,18 @@
     </style>
 </head>
 <body>
+<header>
+    <nav class="navbar">
+        <div class="band">
+            <div class="line">Loyalty</div>
+            <div class="line">Service quality</div>
+            <div class="line">Loyalty</div>
+            <div class="line">Transparency</div>
+        </div>
+    </nav>
+</header>
 
-
+<!--
 <nav class="navbar">
     <div class="band">
         <div class="line">Loyalty</div>
@@ -45,7 +55,7 @@
             <ul class="navbar-nav list">
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <button onclick="openPopup()">
+                        <button onclick="openPopup('login')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
@@ -53,7 +63,7 @@
             </ul>
         </div>
     </div>
-    <!-- PopUp -->
+    PopUp 
     <div class="overlay" id="overlay"></div>
 
     <div class="popup" id="popup">
@@ -62,25 +72,26 @@
             <h2 id="popup-title">Login</h2>
         </div>
         <div class="popup-content" id="popup-content">
-            <!-- Login Form -->
-            <form id="login-form">
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <button type="submit">Login</button>
-            </form>
-            <!-- Sign-Up Form -->
-            <form id="signup-form" style="display: none;">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <button type="submit">Sign Up</button>
-            </form>
+            --Login Form 
+            <-form id="login-form">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <a href="../Views/Home/Visualisation.cshtml">hhh</a>
+            </-form>
+            -- Sign-Up Form 
+            <-form id="signup-form" style="display: none;">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+            </-form>
         </div>
         <div class="popup-footer">
             <span id="toggle-link">Don't have an account? <a onclick="toggleForm()">Sign Up</a></span>
         </div>
     </div>
-</nav>
+</nav> -->
 
 
 <section class="section">

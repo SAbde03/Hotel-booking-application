@@ -1,0 +1,187 @@
+﻿body{
+    width: 100%;
+    height: 100%;
+    
+}
+.path{
+    height: 60px;
+    
+    color: #000000;
+    align-items: center;
+    align-content: center;
+    padding-left: 60px;
+    background-color: rgba(246, 246, 246, 0.76);
+}
+.path a{
+    text-decoration: none;
+    color: black;
+    font-family: font5;
+}
+
+section{
+    
+    height: 700px;
+    width: 100%;
+    display: flex;
+    
+}
+
+.left{
+    width: 50%;
+    height: 90%;
+    
+    align-items: center;
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+}
+.img-container{
+    background: url("../images/room_standard_1.jpg") no-repeat center center ;
+    height:500px;
+    width: 97%;
+    background-size: cover;
+    border-radius: 10px;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.btnContainer{
+    display: flex;
+    gap: 30px;
+    top: 93%;
+    position: absolute;
+    right: 45%;
+}
+.btnContainer button{
+    width: 15px;
+    height:15px;
+    border-radius: 50%;
+    background-color: rgba(246, 246, 246, 0.44);
+    border: solid 0.1px #f6f6f6;
+    padding: 0rem;
+    transition: background-color 0.3s;
+    font-family:font1;
+    margin-bottom: 5px;
+}
+img {
+    width: 300px;
+    height: 150px;
+}
+.right{
+    width: 50%;
+    height: 90%;
+    color: #000000;
+    padding:40px;
+    padding-top: 60px;
+}
+h2{
+    font-size: 60px;
+    color: #000000;
+    padding-bottom: 20px;
+    font-family: font2;
+}
+.counter {
+    margin-bottom: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+.counter .count {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+p{
+    height: 105px;
+    font-family: font5;
+}
+.counter button {
+    background-color: #dcdcdc;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+    padding: 0.75rem;
+    transition: background-color 0.3s;
+    font-family:font2;
+    padding-bottom: 20px;
+}
+
+.price{
+    
+    display: flex;
+    
+}
+/*
+.price h2 ,h1{
+    color: #ff202a;
+}*/
+.links{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 30px;
+    
+}
+.links button {
+    background-color: #e3e3e3;
+    color: #9a9a9a;
+    font-size: 1rem;
+    border: solid 0.1px #d6d6d6;
+    border-radius: 5px;
+    padding: 0.75rem;
+    transition: background-color 0.3s;
+    font-family:font1;
+    margin-bottom: 5px;
+}
+.Book button{
+    background-color: #dc3545;
+    width: 100px;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem;
+    transition: background-color 0.3s;
+    font-family:font2;
+    margin-bottom: 15px;
+}
+.submit {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#dispo{
+    margin-top: 10px;
+    color: #198754;
+    height: 105px;
+    font-family: font5;
+}
+svg{
+    margin-left: 10px;
+    margin-right: 10px ;
+}
+.suggestions{
+    height: 1000px;
+    background-color: rgba(246, 246, 246, 0.76);
+    padding: 20px;
+}
+.suggestions .sugg {
+    height: 250px;
+    background-color: white;
+    border: solid 0.1px rgba(197, 197, 197, 0.78);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display : flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+}
+.suggestions .sugg img {
+    width: 250px;
+    height: 210px;
+    border-radius: 5px;
+}
