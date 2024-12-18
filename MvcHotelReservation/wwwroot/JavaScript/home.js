@@ -30,7 +30,7 @@ function toggleForm() {
 }
 
 function showLogin() {
-    loginForm.style.display = 'block';
+    loginForm.style.display = 'flex';
     signupForm.style.display = 'none';
     popupTitle.textContent = 'Login';
     toggleLink.innerHTML = "Don't have an account? <a onclick='toggleForm()'>Sign Up</a>";
@@ -38,7 +38,7 @@ function showLogin() {
 
 function showSignUp() {
     loginForm.style.display = 'none';
-    signupForm.style.display = 'block';
+    signupForm.style.display = 'flex';
     popupTitle.textContent = 'Sign Up';
     toggleLink.innerHTML = "Already have an account? <a onclick='toggleForm()'>Login</a>";
 }

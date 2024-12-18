@@ -107,11 +107,12 @@ body {
   text-align: left;
   padding-bottom: 1rem ;
   overflow: hidden;
+  height: 430px;
 }
 
 .room-card img {
   width: 100%;
-  height: 200px;
+  height: 230px;
   margin-bottom: 1rem;
 }
 
@@ -128,7 +129,8 @@ body {
   padding-left: 1rem;
   font-size: 0.9rem;
   color: #666;
-  margin-bottom: 1rem;
+  height: 80px;
+  margin-bottom: 0.5rem;
   font-family: font5;
 }
 
@@ -345,13 +347,16 @@ body, html {
 
 .search-box button {
   background-color: #dc3545;
+  width: 100px;
   color: white;
   font-size: 1rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 0.75rem;
   transition: background-color 0.3s;
   font-family:font2;
+  margin-bottom: 15px;
+  padding-left: 10px;
 }
 
 .container-search-box button:hover {
@@ -460,6 +465,7 @@ footer {
   background-color: #ffffff; 
   color: #000000; 
   padding: 40px 20px;
+  padding-bottom: 0;
   font-family:font5;
   align-items: center;
   text-align: center;
@@ -490,14 +496,21 @@ footer {
 .footer-section p {
   font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  height: 10px;
 }
-
+.aboutus{
+  height: 30px;
+}
+.copyright{
+  height: 30px;
+  bottom: 0;
+}
 
 .footer-content-wrapper{
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
 }
 .footer-content-wrapper .contact-us {
   display: flex;
@@ -560,7 +573,7 @@ footer p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
+  width: 450px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -583,12 +596,31 @@ footer p {
 }
 .popup-content {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 .popup-content form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap:40px;
   font-family:font5;
+}
+#login-form{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  font-family:font5;
+  width: 100%;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#signup-form{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  font-family:font5;
+  width: 100%;
 }
 .popup-content form input {
   margin-bottom: 15px;
@@ -597,6 +629,8 @@ footer p {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-family:font5;
+  width: 100%;
+  height: 50px;
 }
 .popup-content form button {
   padding: 10px;

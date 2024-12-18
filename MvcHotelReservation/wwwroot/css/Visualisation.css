@@ -92,6 +92,8 @@ h2{
     height: 40px;
     margin-left: 10px;
     margin-right: 10px;
+    border: solid 0.1px #d6d6d6;
+    border-radius: 5px;
 }
 p{
     height: 105px;
@@ -109,6 +111,16 @@ p{
     transition: background-color 0.3s;
     font-family:font2;
     padding-bottom: 20px;
+    align-items: center;
+    align-content: center;
+    position: relative;
+}
+.counter button div {
+
+    
+    position: absolute;
+    right: 0.8px;
+   top: 11.5px;
 }
 
 .price{
