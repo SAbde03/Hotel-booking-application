@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="/wwwroot/css/Visualisation.css"/>
 </head>
 <body>
-<section class="path"><a href="#">home</a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+<section class="path"><a asp-controller="Home" asp-action="Index">home</a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
     </svg><a href="#">   Standard Room</a>
     </section>
@@ -26,12 +26,12 @@
         <h2>Standard Room</h2>
         <div class="links"><a><button>holding</button></a><a><button>holding</button></a><a><button>holding</button></a><a><button>holding</button></a><a><button>holding</button></a></div>
         <p>A cozy and affordable option with all the essentials for a pleasant stay. Starting at $100/night.</p>
-        <div class="price"><h2>500</h2><h1>MAD</h1></div>
+        <div class="price"><h2 id="price">500</h2><h1>MAD</h1></div>
         <div class="btn"></div>
         <div class="submit">
-            <div class="counter"><button><div><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+            <div class="counter"><button onclick="Decrement()"><div><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
                             <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
-            </svg></div></button><input class="count"/><button><div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+            </svg></div></button><input id="counter" value="0" class="count"/><button onclick="Increment()"><div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
                         </svg></div></button></div>
             <div class="Book"><button>Book</button></div>
@@ -48,6 +48,6 @@
     <div class="sugg"></div>
     <div class="sugg"></div>
 </div>
-<script src="JavaScript/home.js"></script>
+<script src="/JavaScript/home.js"></script>
 </body>
 </html>

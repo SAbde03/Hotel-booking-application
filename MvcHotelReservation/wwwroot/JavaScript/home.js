@@ -42,5 +42,29 @@ function showSignUp() {
     popupTitle.textContent = 'Sign Up';
     toggleLink.innerHTML = "Already have an account? <a onclick='toggleForm()'>Login</a>";
 }
+let count = 0;
+localStorage.setItem('counter', count);
+function Increment() {
+    count = parseInt(localStorage.getItem('counter')) || 0;
+    count++;
+    localStorage.setItem('counter', count);
+    document.getElementById("counter").value = count;
+    updatePrice();
+}
+function Decrement() {
+    count = parseInt(localStorage.getItem('counter')) || 0;
+    count--;
+    localStorage.setItem('counter', count);
+    document.getElementById("counter").value = count;
+    
+    updatePrice();
+}
+function updatePrice() {
+    let price = parseInt(document.getElementById("price").value) || 0; // Get the price value
+    let count = parseInt(document.getElementById("counter").value) || 0; // Get the counter value
+    let total = price * count; // Calculate the total price
+    document.getElementById("price").innerHTML = total; // Update the price display
+    localStorage.setItem('price', total); // Optionally store the total price in localStorage
+}
 
 overlay.addEventListener('click', closePopup);
