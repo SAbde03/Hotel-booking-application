@@ -1,0 +1,159 @@
+﻿@font-face {
+    font-family: font1;
+    src: url("./fonts/interstate-thin-italic-58b641b2d5a92.otf");
+}
+@font-face {
+    font-family: font2;
+    src: url("./fonts/Poppins-Black.ttf");
+}
+@font-face {
+    font-family: font3;
+    src: url("./fonts/Tangerine-Regular.ttf");
+}
+@font-face {
+    font-family: font4;
+    src: url("./fonts/Roboto-Italic.ttf");
+}
+@font-face {
+    font-family: font5;
+    src: url("./fonts/Raleway-VariableFont_wght.ttf");
+}
+    body{
+        width: 100%;
+        height: 100%;
+        font-family: font5;
+    }
+.container1{
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.box{
+    margin-top: 50px;
+    display: flex;
+    position: absolute;
+    width: 900px;
+    height: 650px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: solid 0.1px #cdcdcd;
+    box-shadow: 0 4px 6px rgba(0.1, 0.1, 0.1, 0.1);
+}
+.details{
+    width: 50%;
+    border-right: solid 0.1px #cdcdcd;
+    padding: 30px;
+    padding-top: 80px;
+}
+.check-in-out {
+display: flex;
+    margin-bottom: 40px;
+    justify-content: center;
+    padding-top: 50px;
+}
+.paymentForm{
+    padding: 20px;
+    padding-left: 40px;
+    padding-top: 30px;
+}
+.paymentForm button{
+    background-color: #dc3545;
+    width: 100px;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem;
+    transition: background-color 0.3s;
+    font-family:font2;
+    margin-bottom: 15px;
+}
+input {
+    height: 50px;
+    width: 370px;
+    border: solid 0.1px #000000;
+    border-radius: 5px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+h1{
+    margin-bottom: 50px;
+    font-family: font2;
+}
+#title0{
+    font-family: font2;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+#title1{
+    font-family: font2;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+#title2{
+    font-family: font1;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+#title3{
+    font-family: font1;
+    font-size: 12px;
+}
+.check-out{
+    border-left: solid 0.1px #cdcdcd;
+    padding-left: 20px;
+    
+}
+.check-in{
+    
+    padding-right: 20px;
+}
+.price{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    border-top: solid 0.1px #cdcdcd;
+    padding-top: 20px;
+}
+.p{
+    height: 100px;
+}
+.room{
+    background-color: #ececec;
+    border-radius: 5px;
+    align-content: center;
+    align-items: center;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+.room img{
+    width: 150px;
+    height: 120px;
+    border-radius: 10px;
+    padding-top: 3px;
+}
+.title{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+p{
+    font-size: 10px;
+    height: fit-content;
+}
+.description{
+   padding-left: 15px;
+}
+label{
+    font-family: Arial;
+}
+.path{
+    height: 60px;
+}

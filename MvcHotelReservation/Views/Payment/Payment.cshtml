@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Payment";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariotte</title>
+    <link rel="stylesheet" href="/css/Payment.css"/>
+</head>
+<body>
+<section class="path"><a asp-controller="Home" asp-action="Index">home</a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+    </svg><a asp-controller="Visualisation" asp-action="Visualisation">Standard Room</a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+    </svg><a asp-controller="Payment" asp-action="Payment">Payment</a>
+</section>
+<section class="container1">
+    <div class="box">
+        <div class="details">
+            <div class="title">
+
+
+            </div>
+            <div class="p">
+                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                    <circle cx="8" cy="8" r="8"/>
+                </svg>Non refundable <br/><br/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-standing" viewBox="0 0 16 16">
+                    <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M6 6.75v8.5a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2.75a.75.75 0 0 0 1.5 0v-2.5a.25.25 0 0 1 .5 0"/>
+                </svg>2 adultes <br/></div>
+            <div class="room">
+                <div class="image">
+                    <img src="/images/room_standard_1.jpg" alt="room"/></div>
+                <div class="description">
+                    <h2 class="title">Standard Room</h2>
+                    <p>A cozy and affordable option with all the essentials for a pleasant stay. Starting at $100/night.</p>
+                </div>
+            </div>
+            <div class="check-in-out">
+                <div class="check-in">
+                    <h2 id="title1">Check In</h2>
+                    <h3 id="title2">dim. 22 déc. 2024</h3>
+                    <h3 id="title3">À partir de 15:00</h3>
+                </div>
+                <div class="check-out">
+                    <h2 id="title1">Check Out</h2>
+                    <h3 id="title2">dim. 22 déc. 2024</h3>
+                    <h3 id="title3">Jusqu'à de 12:00</h3>
+                </div>
+            </div>
+
+            <div class="price">
+                <h2 id="title1">Amount</h2>
+                <div class="prix">
+                    <h2 >500</h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="paymentForm">
+            <h1>Payment Details</h1>
+            <form action="/process-payment" method="POST">
+                <label for="cardName">Email</label><br>
+                <input type="text" id="Email" name="Email" placeholder="Enter cardholder's name" required><br><br>
+                <!-- Cardholder Name -->
+                <label for="cardName">Cardholder Name</label><br>
+                <input type="text" id="cardName" name="cardName" placeholder="Enter cardholder's name" required><br><br>
+
+                <!-- Card Number -->
+                <label for="cardNumber">Card Number</label><br>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="16" pattern="\d{16}" required><br><br>
+
+                <!-- Expiration Date -->
+                <label for="expiryDate">Expiration Date</label><br>
+                <input type="month" id="expiryDate" name="expiryDate" required><br><br>
+
+                <!-- CVV 
+                <label for="cvv">CVV</label><br>
+                <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" pattern="\d{3}" required><br><br>
+                -->
+                <!-- Payment Button -->
+                <button type="submit">Pay Now</button>
+            </form></div>
+    </div>
+</section>
+
+</body>
+
+</html>
