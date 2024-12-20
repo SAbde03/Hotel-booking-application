@@ -15,4 +15,9 @@
     <_ContentIncludedByDefault Remove="wwwroot\fonts\interstate-thin-italic-58b641b2d5a92.otf" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.1.0" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.22" />
+  </ItemGroup>
+
 </Project>

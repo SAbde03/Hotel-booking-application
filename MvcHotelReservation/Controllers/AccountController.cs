@@ -17,14 +17,14 @@ namespace MvcHotelReservation.Controllers
         }
         // Process login POST request
         [HttpPost]
-        public IActionResult Login(string username, string password)
+        public IActionResult Login(string email, string password)
         {
             // Simple authentication logic for demonstration only
-            if (username == "admin" && password == "password")
+            if (email == "email@gmail.com" && password == "password")
             {
                 // Authentication successful
                 TempData["Message"] = "Login successful!";
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Visualisation", "Visualisation");
             }
             else
             {
