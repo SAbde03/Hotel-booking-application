@@ -43,13 +43,13 @@
                 </div>
                 <div class="popup-content" id="popup-content">
                     <!-- Login Form -->
-                    <form id="login-form" method="post" asp-controller="Account" asp-action="Login">
+                    <form id="login-form" method="get" asp-controller="Account" asp-action="Login">
                         <input name="email" type="email" placeholder="Email" required>
                         <input name="Password" type="password" placeholder="Password" required>
                         <button type="submit">Login</button>
                     </form>
                     <!-- Sign-Up Form -->
-                    <form id="signup-form" style="display: none;">
+                    <form id="signup-form" style="display: none;"asp-action="Signin" method="post">
                         <input type="text" placeholder="Full Name" required>
                         <input type="email" placeholder="Email" required>
                         <input type="password" placeholder="Password" required>

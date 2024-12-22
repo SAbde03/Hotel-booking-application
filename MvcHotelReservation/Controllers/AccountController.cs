@@ -1,10 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+using MvcHotelReservation.Models;
 namespace MvcHotelReservation.Controllers
 {
     public class AccountController : Controller
     {
-        // Display the Login page
+        private static readonly List<Utilisateur> Utilisateurs = new List<Utilisateur>();
+
+        [HttpGet]
+        public ActionResult<IEnumerable<Utilisateur>> GetUtilisateurs()
+        {
+            return Ok(Utilisateurs);
+        }
+        /* Display the Login page
         [HttpGet]
         public IActionResult Login()
         {
@@ -14,24 +21,30 @@ namespace MvcHotelReservation.Controllers
         public IActionResult SignUp()
         {
             return View();
-        }
+        }*/
         // Process login POST request
-        [HttpPost]
-        public IActionResult Login(string email, string password)
+        [HttpGet("{email}/{password}")]
+        public ActionResult <Utilisateur> Login(string email, string password)
         {
-            // Simple authentication logic for demonstration only
-            if (email == "email@gmail.com" && password == "password")
+            
+            var utilisateur = Utilisateurs.FirstOrDefault(u => u.email == email|| u.motDePasse == password);
+            if (utilisateur == null)
             {
-                // Authentication successful
-                TempData["Message"] = "Login successful!";
-                return RedirectToAction("Visualisation", "Visualisation");
+                return NotFound();
             }
-            else
+            return Ok(utilisateur);
+        }
+        
+        public ActionResult Signin([FromBody] Utilisateur utilisateur)
+        {
+            if (utilisateur == null)
             {
-                // Authentication failed
-                ViewBag.ErrorMessage = "Invalid username or password.";
-                return View();
+                return BadRequest("Utilisateur cannot be null.");
             }
+
+            utilisateur.idUtilisateur = Utilisateurs.Count > 0 ? Utilisateurs.Max(u => u.idUtilisateur) + 1 : 1;
+            Utilisateurs.Add(utilisateur);
+            return CreatedAtAction(nameof(Login), new { id = utilisateur.idUtilisateur }, utilisateur);
         }
 
         // Optional: Logout Action

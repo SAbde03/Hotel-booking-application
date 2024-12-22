@@ -1,7 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using MvcHotelReservation.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<ApplicationDbContext>();
+
+string _GetConnStringName = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContextPool<ApplicationDbContext>(options =>
+    options.UseMySql(_GetConnStringName, ServerVersion.AutoDetect(_GetConnStringName)));
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
