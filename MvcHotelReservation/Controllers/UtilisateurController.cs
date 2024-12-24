@@ -10,27 +10,22 @@ using MvcHotelReservation.Models;
 
 namespace MvcHotelReservation.Controllers
 {
-    public class PaymentController : Controller
+    public class UtilisateurController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public PaymentController(ApplicationDbContext context)
+        public UtilisateurController(ApplicationDbContext context)
         {
             _context = context;
         }
-        [HttpGet]
-        [Route("Payment")]
-        public IActionResult Payment()
-        {
-            return View();
-        }
-        // GET: Payment
+
+        // GET: Utilisateur
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Paiements.ToListAsync());
+            return View(await _context.Utilisateurs.ToListAsync());
         }
 
-        // GET: Payment/Details/5
+        // GET: Utilisateur/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -38,39 +33,39 @@ namespace MvcHotelReservation.Controllers
                 return NotFound();
             }
 
-            var paiement = await _context.Paiements
-                .FirstOrDefaultAsync(m => m.IdPaiement == id);
-            if (paiement == null)
+            var utilisateur = await _context.Utilisateurs
+                .FirstOrDefaultAsync(m => m.idUtilisateur == id);
+            if (utilisateur == null)
             {
                 return NotFound();
             }
 
-            return View(paiement);
+            return View(utilisateur);
         }
 
-        // GET: Payment/Create
+        // GET: Utilisateur/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Payment/Create
+        // POST: Utilisateur/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdPaiement,IdReservation,Montant,DatePaiement,MethodePaiement,Statut")] Paiement paiement)
+        public async Task<IActionResult> Create([Bind("idUtilisateur,nom,prenom,email,motDePasse,telephone,dateInscription")] Utilisateur utilisateur)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(paiement);
+                _context.Add(utilisateur);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(paiement);
+            return View(utilisateur);
         }
 
-        // GET: Payment/Edit/5
+        // GET: Utilisateur/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -78,22 +73,22 @@ namespace MvcHotelReservation.Controllers
                 return NotFound();
             }
 
-            var paiement = await _context.Paiements.FindAsync(id);
-            if (paiement == null)
+            var utilisateur = await _context.Utilisateurs.FindAsync(id);
+            if (utilisateur == null)
             {
                 return NotFound();
             }
-            return View(paiement);
+            return View(utilisateur);
         }
 
-        // POST: Payment/Edit/5
+        // POST: Utilisateur/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdPaiement,IdReservation,Montant,DatePaiement,MethodePaiement,Statut")] Paiement paiement)
+        public async Task<IActionResult> Edit(int id, [Bind("idUtilisateur,nom,prenom,email,motDePasse,telephone,dateInscription")] Utilisateur utilisateur)
         {
-            if (id != paiement.IdPaiement)
+            if (id != utilisateur.idUtilisateur)
             {
                 return NotFound();
             }
@@ -102,12 +97,12 @@ namespace MvcHotelReservation.Controllers
             {
                 try
                 {
-                    _context.Update(paiement);
+                    _context.Update(utilisateur);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PaiementExists(paiement.IdPaiement))
+                    if (!UtilisateurExists(utilisateur.idUtilisateur))
                     {
                         return NotFound();
                     }
@@ -118,10 +113,10 @@ namespace MvcHotelReservation.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(paiement);
+            return View(utilisateur);
         }
 
-        // GET: Payment/Delete/5
+        // GET: Utilisateur/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -129,34 +124,34 @@ namespace MvcHotelReservation.Controllers
                 return NotFound();
             }
 
-            var paiement = await _context.Paiements
-                .FirstOrDefaultAsync(m => m.IdPaiement == id);
-            if (paiement == null)
+            var utilisateur = await _context.Utilisateurs
+                .FirstOrDefaultAsync(m => m.idUtilisateur == id);
+            if (utilisateur == null)
             {
                 return NotFound();
             }
 
-            return View(paiement);
+            return View(utilisateur);
         }
 
-        // POST: Payment/Delete/5
+        // POST: Utilisateur/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var paiement = await _context.Paiements.FindAsync(id);
-            if (paiement != null)
+            var utilisateur = await _context.Utilisateurs.FindAsync(id);
+            if (utilisateur != null)
             {
-                _context.Paiements.Remove(paiement);
+                _context.Utilisateurs.Remove(utilisateur);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PaiementExists(int id)
+        private bool UtilisateurExists(int id)
         {
-            return _context.Paiements.Any(e => e.IdPaiement == id);
+            return _context.Utilisateurs.Any(e => e.idUtilisateur == id);
         }
     }
 }

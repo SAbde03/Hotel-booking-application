@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\MAR-5124f716.ico"
     },
     {
+      "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\css\\Index.css",
+      "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
       "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\css\\Payment.css",
       "PackagePath": "staticwebassets\\css\\Payment.css"
     },

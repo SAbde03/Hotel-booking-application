@@ -1,6 +1,34 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
+﻿@model List<Chambre>
+
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
+
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>num</th>
+        <th>type</th>
+        <th>capacite</th>
+        <th>prix</th>
+        <th>desc</th>
+        <th>disponible</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach(var chamber in Model)
+    {
+        <tr>
+            <td>{chamber.Id}</td>
+            
+
+        </tr>
+        
+
+
+    }
+
+    </tbody>
+</table>
+

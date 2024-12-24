@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
@@ -154,5 +155,7 @@ namespace MvcHotelReservation.Migrations
             migrationBuilder.DropTable(
                 name: "Utilisateurs");
         }
+
+        
     }
 }

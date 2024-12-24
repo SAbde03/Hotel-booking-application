@@ -1,0 +1,105 @@
+@model IEnumerable<MvcHotelReservation.Models.Chambre>
+@{
+    ViewData["Title"] = "Index";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Index.css"/>
+    <title>Mariotte</title>
+</head>
+<body>
+<section class="path"><a asp-controller="Home" asp-action="Index">home</a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+    </svg><a asp-controller="Chambre" asp-action="Index">Explore</a>
+</section>
+
+<!--
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroChambre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeChambre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Capacite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrixParNuit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Disponibilite)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroChambre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeChambre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Capacite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrixParNuit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Disponibilite)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdChambre">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdChambre">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdChambre">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+-->
+<div class="sections-container">
+@foreach (var item in Model)
+{
+    <section >
+
+        <div class="left">
+            <div class="img-container">
+            </div></div>
+        <div class="right">
+            <div class="title">
+                <h2>@Html.DisplayFor(model => item.TypeChambre)</h2>
+            </div>
+
+            <p>@Html.DisplayFor(model => item.Description)</p>
+            <div class="price">
+                <h2 id="price">@Html.DisplayFor(model => item.PrixParNuit)</h2>
+                <h5>MAD</h5></div>
+
+        </div>
+        <div class="detailsbtn">
+            <a asp-controller="Chambre" asp-action="Details" asp-route-id="@item.IdChambre" method="GET"><button>Details</button></a>
+        </div>
+        <!--<p id="dispo">20 chambres disponibles</p>-->
+
+
+    </section>
+}
+</div>
+</body>
+</html>

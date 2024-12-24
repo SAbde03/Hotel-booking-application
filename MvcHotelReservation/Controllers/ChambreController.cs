@@ -1,82 +1,159 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using MvcHotelReservation.Data;
+using MvcHotelReservation.Models;
 
-namespace MvcHotelReservation.Controllers;
-using Models;
-[ApiController]
-[Route("api/[controller]")]
-public class ChambreController : Controller
-
-   
+namespace MvcHotelReservation.Controllers
+{
+    public class ChambreController : Controller
     {
-        private static readonly List<Chambre> Chambres = new List<Chambre>();
+        private  ApplicationDbContext _context;
 
-        [HttpGet]
-        public ActionResult<IEnumerable<Chambre>> GetChambres()
+        public ChambreController(ApplicationDbContext context)
         {
-            return Ok(Chambres);
+            _context = context;
         }
 
-        [HttpGet("{id}")]
-        public ActionResult<Chambre> GetChambreByType(string type)
+        // GET: Chambre
+        public async Task<IActionResult> Index()
         {
-            var chambre = Chambres.FirstOrDefault(c => c.TypeChambre == type);
-            if (chambre == null)
-            {
-                return NotFound();
-            }
-            return Ok(chambre);
-        }
-
-        
-
-        [HttpPut("{id}")]
-        public ActionResult UpdateChambre(int id, [FromBody] Chambre updatedChambre)
-        {
-            var chambre = Chambres.FirstOrDefault(c => c.IdChambre == id);
-            if (chambre == null)
-            {
-                return NotFound();
-            }
-
-            chambre.NumeroChambre = updatedChambre.NumeroChambre;
-            chambre.TypeChambre = updatedChambre.TypeChambre;
-            chambre.Capacite = updatedChambre.Capacite;
-            chambre.PrixParNuit = updatedChambre.PrixParNuit;
-            chambre.Description = updatedChambre.Description;
-            chambre.Disponibilite = updatedChambre.Disponibilite;
-
-            return NoContent();
-        }
-
-        [HttpDelete("{id}")]
-        public ActionResult DeleteChambre(int id)
-        {
-            var chambre = Chambres.FirstOrDefault(c => c.IdChambre == id);
-            if (chambre == null)
-            {
-                return NotFound();
-            }
-
-            Chambres.Remove(chambre);
-            return NoContent();
-        }
-        [HttpPost("reserve/{id}")]
-        public ActionResult ReserveChambre(int id)
-        {
-            var chambre = Chambres.FirstOrDefault(c => c.IdChambre == id);
-            if (chambre == null)
-            {
-                return NotFound("Chambre not found.");
-            }
-
-            if (!chambre.Disponibilite)
-            {
-                return BadRequest("Chambre is not available.");
-            }
-
-            chambre.Disponibilite = false;
-            return Ok("Chambre reserved successfully.");
+            return View(await _context.Chambres.ToListAsync());
         }
         
-    }
     
+        // GET: Chambre/Details/5
+        [Route("Chambre/Details/{id?}")]
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var chambre = await _context.Chambres
+                .FirstOrDefaultAsync(m => m.IdChambre == id);
+            if (chambre == null)
+            {
+                return NotFound();
+            }
+
+            return View(chambre);
+        }
+
+        // GET: Chambre/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Chambre/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("IdChambre,NumeroChambre,TypeChambre,Capacite,PrixParNuit,Description,Disponibilite")] Chambre chambre)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(chambre);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(chambre);
+        }
+
+        // GET: Chambre/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var chambre = await _context.Chambres.FindAsync(id);
+            if (chambre == null)
+            {
+                return NotFound();
+            }
+            return View(chambre);
+        }
+
+        // POST: Chambre/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("IdChambre,NumeroChambre,TypeChambre,Capacite,PrixParNuit,Description,Disponibilite")] Chambre chambre)
+        {
+            if (id != chambre.IdChambre)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(chambre);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!ChambreExists(chambre.IdChambre))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(chambre);
+        }
+
+        // GET: Chambre/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var chambre = await _context.Chambres
+                .FirstOrDefaultAsync(m => m.IdChambre == id);
+            if (chambre == null)
+            {
+                return NotFound();
+            }
+
+            return View(chambre);
+        }
+
+        // POST: Chambre/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var chambre = await _context.Chambres.FindAsync(id);
+            if (chambre != null)
+            {
+                _context.Chambres.Remove(chambre);
+            }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool ChambreExists(int id)
+        {
+            return _context.Chambres.Any(e => e.IdChambre == id);
+        }
+    }
+}

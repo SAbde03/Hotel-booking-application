@@ -1,0 +1,68 @@
+﻿.path{
+    height: 60px;
+
+    color: #000000;
+    align-items: center;
+    align-content: center;
+    padding-left: 60px;
+    background-color: rgba(246, 246, 246, 0.76);
+}
+.path a{
+    text-decoration: none;
+    color: black;
+    font-family: font5;
+}
+.sections-container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+.left{
+    width: 15%;
+    height: 90%;
+    padding-top: 10px;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+}
+.right{
+    padding-top: 15px;
+    padding-left: 20px;
+    
+}
+.img-container{
+    background: url("../images/room_standard_1.jpg") no-repeat center center ;
+    height:150px;
+    width: 90%;
+    background-size: cover;
+    border-radius: 10px;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+}
+section{
+
+    height: 180px;
+    width: 100%;
+    display: flex;
+    border-top: #dddddd solid 0.1px;
+    padding-top: 10px;
+}
+section:hover{
+background-color: #e8e8e8;
+}
+h2{
+    font-size: 20px;
+    color: #000000;
+    padding-bottom: 10px;
+    font-family: font2;
+}
+h1{
+    font-family: font5;
+}
+p{
+    height: 50px;
+    font-family: font5;
+}

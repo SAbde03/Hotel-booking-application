@@ -1,7 +1,4 @@
-﻿@{
-    ViewData["Title"] = "Welcome to Our Hotel";
-}
-
+﻿@model IEnumerable<MvcHotelReservation.Models.Chambre>;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,7 +99,7 @@
 
 
         <div class="container-search-box">
-            <form asp-controller="Visualisation" asp-action="Visualisation" method="post">
+            <form asp-controller="Chambre" asp-action="Index"  method="GET">
                 <div class="search-box-inputs">
                     <div class="grids">
                         <label for="destination" class="form-label">Where do you want to book ?</label>
@@ -118,11 +115,11 @@
                     </div>
                     <div class="grids">
                         <label for="guests" class="form-label">Rooms & Guests</label>
-                        <select id="guests" class="form-select">
-                            <option selected>1 Room(s) - 1 Guest(s)</option>
-                            <option>2 Room(s) - 2 Guest(s)</option>
-                            <option>3 Room(s) - 3 Guest(s)</option>
-                        </select>
+                        <select id="type" class="form-select">
+                                <option value="deluxe">Deluxe</option>
+                                <option value="standard">Standard</option>
+                                <option value="suite">Suite</option>
+                            </select>  
                     </div>
                     <div class="search-btn">
                         <button type="submit" class="submit">Search</button>
