@@ -65,6 +65,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\1721270428129.jpeg",
+      "PackagePath": "staticwebassets\\images\\1721270428129.jpeg"
+    },
+    {
       "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\B6911_~2_13by5.jpg",
       "PackagePath": "staticwebassets\\images\\B6911_~2_13by5.jpg"
     },
@@ -83,6 +87,10 @@
     {
       "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\profile-icon-design-free-vector.jpg",
+      "PackagePath": "staticwebassets\\images\\profile-icon-design-free-vector.jpg"
     },
     {
       "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\room_standard_1.jpg",

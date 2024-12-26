@@ -251,7 +251,10 @@ body, html {
 }
 
 .navbar .nav-item {
+  width:fit-content;
   margin-left: 1rem;
+  padding: 5px 10px 5px 10px;
+  border-radius: 0.5rem;
 }
 
 .navbar .nav-link {
@@ -259,10 +262,17 @@ body, html {
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s;
+  font-family: font4;
 }
 
-.navbar .nav-link:hover {
-  color: #f8d7da;
+
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+  border: black solid 0.1px;
 }
 .navbar button {
   width: 190px;

@@ -10,6 +10,7 @@
     align-items: center;
     align-content: center;
     padding-left: 60px;
+    padding-bottom: 10px;
     background-color: rgba(246, 246, 246, 0.76);
 }
 .path a{

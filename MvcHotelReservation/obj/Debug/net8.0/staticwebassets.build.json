@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cSFeM1h/U9NMtvE3Dl/9C/n49TVgLXo7a4epmGxUilA=",
+  "Hash": "I4j5plRc33ynqLfioF1DHtBGcqF6eLEZlqTX6l4NWTk=",
   "Source": "MvcHotelReservation",
   "BasePath": "_content/MvcHotelReservation",
   "Mode": "Default",
@@ -302,6 +302,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\1721270428129.jpeg",
+      "SourceId": "MvcHotelReservation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\",
+      "BasePath": "_content/MvcHotelReservation",
+      "RelativePath": "images/1721270428129.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1721270428129.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\atr.royalmansion-majlis-mr.jpg",
       "SourceId": "MvcHotelReservation",
       "SourceType": "Discovered",
@@ -395,6 +414,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Marriott-International-Logo-500x281.png"
+    },
+    {
+      "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\profile-icon-design-free-vector.jpg",
+      "SourceId": "MvcHotelReservation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\",
+      "BasePath": "_content/MvcHotelReservation",
+      "RelativePath": "images/profile-icon-design-free-vector.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\profile-icon-design-free-vector.jpg"
     },
     {
       "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\room_standard_1.jpg",

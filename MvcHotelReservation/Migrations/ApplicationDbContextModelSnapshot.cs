@@ -44,8 +44,8 @@ namespace MvcHotelReservation.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<decimal?>("PrixParNuit")
-                        .HasColumnType("decimal(65,30)");
+                    b.Property<int?>("PrixParNuit")
+                        .HasColumnType("int");
 
                     b.Property<string>("TypeChambre")
                         .IsRequired()
@@ -148,6 +148,10 @@ namespace MvcHotelReservation.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("imagePath")
                         .IsRequired()
                         .HasColumnType("longtext");
 

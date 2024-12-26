@@ -34,7 +34,7 @@
 }
 .img-container{
     background: url("../images/room_standard_1.jpg") no-repeat center center ;
-    height:150px;
+    height:90%;
     width: 90%;
     background-size: cover;
     border-radius: 10px;
@@ -42,16 +42,23 @@
     position: relative;
     overflow: hidden;
 }
-section{
-
-    height: 180px;
+.sections-container{
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    gap: 10px;
+}
+.sections{
+    
+    height: 190px;
     width: 100%;
     display: flex;
-    border-top: #dddddd solid 0.1px;
+    border: #dddddd solid 0.1px;
+    border-radius: 10px;
     padding-top: 10px;
-    padding-left: 40px;
+    padding-left: 20px;
 }
-section:hover{
+.sections:hover{
 background-color: #e8e8e8;
 }
 h2{

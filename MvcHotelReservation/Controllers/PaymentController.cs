@@ -19,10 +19,22 @@ namespace MvcHotelReservation.Controllers
             _context = context;
         }
         [HttpGet]
-        [Route("Payment")]
-        public IActionResult Payment()
+        [Route("Chambre/Details/{id?}")]
+        public async Task<IActionResult> Payment(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var chambre = await _context.Chambres
+                .FirstOrDefaultAsync(m => m.IdChambre == id);
+            if (chambre == null)
+            {
+                return NotFound();
+            }
+
+            return View(chambre);
         }
         // GET: Payment
         public async Task<IActionResult> Index()
