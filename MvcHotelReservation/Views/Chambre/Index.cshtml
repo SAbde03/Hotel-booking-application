@@ -14,9 +14,18 @@
 </head>
 <body>
 <style>
+    
     .section{
         height: 100px;
         margin-bottom: 100px;
+    }
+    .search-box-inputs .grids select{
+       
+        height: 100%;
+    }
+    .search-box-inputs .grids input {
+        width:250px;
+        height: 90%;
     }
     .section .content{
         padding-top: 0px;
@@ -38,6 +47,27 @@
         align-items: center;
         align-content: space-around;
     }
+    .detailsbtn{
+        display: flex;
+    }
+    .detailsbtn .favoris{
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        margin-top: 60px;
+        margin-left: 20px;
+        background-color: white;
+        border: solid 0.1px #d6d6d6;
+    }
+    .favoris svg {
+        margin-right: 0px;
+        padding-right: 0px;
+        margin-left: 0px;
+        width: 21px;
+        height: 21px;
+        padding-top: 5px;
+    }
+
 </style>
 <section class="path"><a asp-controller="Home" asp-action="Index">home</a>
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
@@ -64,19 +94,18 @@
                     <div class="grids">
                         <label for="guests" class="form-label">Rooms & Guests</label>
                         <select name="capacity" id="type" class="form-select">
-                            <!-- <option value="deluxe">Deluxe</option>
-                            <option value="standard">Standard</option>
-                            <option value="suite">Suite</option> -->
                             <option value="0">--</option>
-                            <option value="1">1 personne</option>
-                            <option value="2">2 personnes</option>
-                            <option value="3">3 personnes</option>
-                            <option value="4">4 personnes</option>
-                            <option value="5">5 personnes ou plus</option>
+                            <option value="1">1 guest</option>
+                            <option value="2">2 guests</option>
+                            <option value="3">3 guests</option>
+                            <option value="4">4 guests</option>
+                            <option value="5">+ 5 guests</option>
                         </select>
                     </div>
                     <div class="search-btn">
-                        <button type="submit" class="submit">Search</button>
+                        <button type="submit" class="submit"><svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                            </svg>Search</button>
 
                     </div>
                 </div>
@@ -107,6 +136,9 @@
             </div>
             <div class="detailsbtn">
                 <a asp-controller="Chambre" asp-action="Details" asp-route-id="@item.IdChambre" method="GET"><button class="details">Details</button></a>
+                <button class="favoris"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-star" viewBox="0 0 16 16">
+                        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                    </svg></button>
             </div>
             <!--<p id="dispo">20 chambres disponibles</p>-->
 

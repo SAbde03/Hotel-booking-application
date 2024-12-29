@@ -29,6 +29,9 @@ namespace MvcHotelReservation.Controllers
             HttpContext.Session.SetString("checkinTime", checkin.ToShortTimeString());
             HttpContext.Session.SetString("checkout", checkout.ToShortDateString());
             HttpContext.Session.SetString("checkoutTime", checkin.ToShortTimeString());
+            int daysDifference = (checkout - checkin).Days;
+            ViewData["daysDifference"] = daysDifference;
+                HttpContext.Session.SetInt32("daysDifference",daysDifference);
             var availableRooms = await _context.Chambres
                 .Where(c => c.Disponibilite == true && c.Capacite>=capacity).OrderBy(PrixParNuit => PrixParNuit)
                 .ToListAsync();

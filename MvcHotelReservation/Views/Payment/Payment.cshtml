@@ -14,9 +14,25 @@
     <link rel="stylesheet" href="/css/Payment.css"/>
 </head>
 <body>
-<section class="path"><a asp-controller="Home" asp-action="Index">home</a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+<style>
+    .paymentForm button{
+        background-color: #008080;
+        width: 100px;
+        color: white;
+        font-size: 1rem;
+        border: none;
+        border-radius: 10px;
+        padding: 0.75rem;
+        transition: background-color 0.3s;
+        font-family:font2;
+        margin-bottom: 15px;
+    }
+</style>
+<section class="path"><a asp-controller="Home" asp-action="Index">home</a>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-    </svg> <a asp-controller="Chambre" asp-action="Details" asp-route-id="@Model.IdChambre" method="GET">@Html.DisplayFor(model => model.TypeChambre)</a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+    </svg> <a asp-controller="Chambre" asp-action="Details" asp-route-id="@Model.IdChambre" method="GET">@Html.DisplayFor(model => model.TypeChambre)</a>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
     </svg><a asp-controller="Payment" asp-action="Payment">Payment</a>
 </section>
@@ -51,21 +67,21 @@
                 <div class="check-out">
                     <h2 id="title1">Check Out</h2>
                     <h3 id="title2">@HttpContextAccessor.HttpContext.Session.GetString("checkout")</h3>
-                    <h3 id="title3">Jusqu'à de  @HttpContextAccessor.HttpContext.Session.GetString("checkoutTime")</h3>
+                    <h3 id="title3">Jusqu'à de @HttpContextAccessor.HttpContext.Session.GetString("checkoutTime")</h3>
                 </div>
             </div>
 
             <div class="price">
                 <h2 id="title1">Amount</h2>
                 <div class="prix">
-                    <h2 >@Html.DisplayFor(model => model.PrixParNuit)</h2>
+                    <h2>@HttpContextAccessor.HttpContext.Session.GetInt32("montant")</h2>
 
                 </div>
             </div>
         </div>
         <div class="paymentForm">
-            <h1>Payment Details</h1>
-            <form action="/process-payment" method="POST">
+            <h1>Reservation Details</h1>
+            <form asp-controller="Reservation" asp-action="Create" method="POST">
                 <label for="cardName">Email</label><br>
                 <input type="text" id="Email" name="Email" placeholder="Enter cardholder's name" required><br><br>
                 <!-- Cardholder Name -->
@@ -85,7 +101,7 @@
                 <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" pattern="\d{3}" required><br><br>
                 -->
                 <!-- Payment Button -->
-                <button type="submit">Pay Now</button>
+                <button type="submit">Send</button>
             </form></div>
     </div>
 </section>

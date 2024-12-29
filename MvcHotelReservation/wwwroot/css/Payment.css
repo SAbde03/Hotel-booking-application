@@ -59,8 +59,8 @@ display: flex;
     padding-left: 40px;
     padding-top: 30px;
 }
-.paymentForm button{
-    background-color: #dc3545;
+.paymentForm .submit{
+    background-color: #008080;
     width: 100px;
     color: white;
     font-size: 1rem;

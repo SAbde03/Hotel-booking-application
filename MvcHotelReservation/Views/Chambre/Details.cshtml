@@ -84,20 +84,21 @@
             <h1>MAD</h1></div>
         <div class="btn"></div>
         <div class="submit">
-            <div class="counter">
-                <button onclick="Decrement()">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
-                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
-                        </svg></div></button><input id="counter" value="0" class="count"/>
-                <button onclick="Increment()">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                        </svg></div></button></div>
-            <div class="Book"><a asp-controller="Payment" asp-action="Payment" asp-route-id="@Model.IdChambre"><button>Book</button></a></div>
-        </div>
-        <!--<p id="dispo">20 chambres disponibles</p>-->
+            <!-- <div class="counter">
+                 <button onclick="Decrement()">
+                     <div>
+                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                             <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
+                         </svg></div></button><input id="counter" value="0" class="count"/>
+                 <button onclick="Increment()">
+                     <div>
+                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                             <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                         </svg></div></button></div> -->
+             <div class="Book"><a asp-controller="Payment" asp-action="Payment" asp-route-id="@Model.IdChambre" asp-route-price="@Model.PrixParNuit">
+                     <button>Book</button></a></div>
+         </div>
+         <!--<p id="dispo">20 chambres disponibles</p>-->
     </div>
 
 </section>

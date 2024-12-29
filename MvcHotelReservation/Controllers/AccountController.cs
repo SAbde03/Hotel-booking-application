@@ -59,6 +59,7 @@ namespace MvcHotelReservation.Controllers
 
                 if (utilisateur != null)
                 {
+                    HttpContext.Session.SetInt32("idClient",utilisateur.idUtilisateur);
                     HttpContext.Session.SetString("FullName", utilisateur.nom + " " + utilisateur.prenom);
                     HttpContext.Session.SetString("imagePath", utilisateur.imagePath);
                     return RedirectToAction("Index", "Home");

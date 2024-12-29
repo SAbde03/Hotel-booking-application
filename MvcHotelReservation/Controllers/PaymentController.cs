@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MvcHotelReservation.Data;
 using MvcHotelReservation.Models;
+using Org.BouncyCastle.Crypto.Engines;
+
 
 namespace MvcHotelReservation.Controllers
 {
@@ -18,10 +20,27 @@ namespace MvcHotelReservation.Controllers
         {
             _context = context;
         }
-       
-        public async Task<IActionResult> Payment(int? id)
+        public async Task<IActionResult> Payment(int id, int? price)
         {
-            if (id == null)
+            
+            if (price == null || price <= 0)
+            {
+                return BadRequest("Invalid or missing room price.");
+            }
+
+            
+            int? daysDifference = HttpContext.Session.GetInt32("daysDifference");
+            if (daysDifference == null || daysDifference <= 0)
+            {
+                return BadRequest("Days difference is not set or invalid in the session.");
+            }
+            
+            int montant = price.Value * daysDifference.Value;
+            TempData["montant"] = montant;
+            HttpContext.Session.SetInt32("montant",montant);
+            TempData["idChambre"] = id;
+           // HttpContext.Session.SetInt32("idChambre",id);
+        if (id == null)
             {
                 return NotFound();
             }
