@@ -18,10 +18,10 @@ namespace MvcHotelReservation.Controllers
         }
 
         // GET: Utilisateur
-        public async Task<IActionResult> Index()
+        /*public async Task<IActionResult> Index()
         {
             return View(await _context.Utilisateurs.FindAsync());
-        }
+        }*/
         /* Display the Login page
         [HttpGet]
         public IActionResult Login()
@@ -78,10 +78,10 @@ namespace MvcHotelReservation.Controllers
                 utilisateur.dateInscription = DateTime.Now; 
                 _context.Add(utilisateur);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index)); 
+                //return RedirectToAction(nameof(Index)); 
             }
 
-            return View();
+            return RedirectToAction("Index", "Home");
         }
             
             
@@ -119,14 +119,15 @@ namespace MvcHotelReservation.Controllers
     
         
         // Optional: Logout Action
-        
-        
-        /*
+
+
+
         public IActionResult Index()
         {
             HttpContext.Session.GetString("username");
             return View();
-        }*/
+        }
+
         public IActionResult Profil()
         {
             return View();

@@ -20,9 +20,21 @@ namespace MvcHotelReservation.Controllers
         }
 
         // GET: Chambre
-        public async Task<IActionResult> Index()
+        [HttpPost]
+        public async Task<IActionResult> Index(DateTime checkin, DateTime checkout,int capacity)
         {
-            return View(await _context.Chambres.ToListAsync());
+            TempData["checkin"] = checkin;
+            TempData["checkout"] = checkout;
+            HttpContext.Session.SetString("checkin", checkin.ToShortDateString());
+            HttpContext.Session.SetString("checkinTime", checkin.ToShortTimeString());
+            HttpContext.Session.SetString("checkout", checkout.ToShortDateString());
+            HttpContext.Session.SetString("checkoutTime", checkin.ToShortTimeString());
+            var availableRooms = await _context.Chambres
+                .Where(c => c.Disponibilite == true && c.Capacite>=capacity).OrderBy(PrixParNuit => PrixParNuit)
+                .ToListAsync();
+            return View(availableRooms);
+
+           
         }
         
     

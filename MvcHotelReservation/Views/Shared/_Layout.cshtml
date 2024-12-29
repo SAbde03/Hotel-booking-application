@@ -1,6 +1,8 @@
 ﻿@using Microsoft.AspNetCore.Http
 @inject IHttpContextAccessor HttpContextAccessor
-@model MvcHotelReservation.Models.Utilisateur
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,13 +15,9 @@
     <link rel="stylesheet" href="~/MvcHotelReservation.styles.css" asp-append-version="true" />
 </head>
 <body>
-@if (TempData["LoginFailed"] != null && TempData["LoginFailed"].ToString() == "true")
-{
-    <script>
-        toggleForm(); // Trigger a JavaScript function here.
-    </script>
-}
+
 <header>
+    
     <nav class="navbar">
         <div class="container">
             <div class="navbar-brand">
@@ -83,11 +81,11 @@
                 </form>
                 <!-- Sign-Up Form -->
                 <form id="signup-form" style="display: none;  "asp-action="signUp" asp-controller="Account" method="post">
-                    <input asp-for="nom" type="text" placeholder="Nom" required>
-                    <input asp-for="prenom" type="text" placeholder="Prenom" required>
-                    <input asp-for="email" type="email" placeholder="email" required>
-                    <input asp-for="motDePasse" type="password" placeholder="Password" required>
-                    <input asp-for="telephone" type="text" placeholder="Phone number" required>
+                    <input for="nom" type="text" placeholder="Nom" required>
+                    <input for="prenom" type="text" placeholder="Prenom" required>
+                    <input for="email" type="email" placeholder="email" required>
+                    <input for="motDePasse" type="password" placeholder="Password" required>
+                    <input for="telephone" type="text" placeholder="Phone number" required>
                     <button type="submit">Sign Up</button>
                 </form>
             </div>

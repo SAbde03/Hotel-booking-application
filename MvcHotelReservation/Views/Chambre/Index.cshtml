@@ -1,105 +1,118 @@
-@model IEnumerable<MvcHotelReservation.Models.Chambre>
+@model List<MvcHotelReservation.Models.Chambre>
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Index.css"/>
+    <link rel="stylesheet" href="/css/Index.css"/>
     <title>Mariotte</title>
+    
 </head>
 <body>
-<section class="path"><a asp-controller="Home" asp-action="Index">home</a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+<style>
+    .section{
+        height: 100px;
+        margin-bottom: 100px;
+    }
+    .section .content{
+        padding-top: 0px;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        height: fit-content;
+    }
+    .container-search-box {
+        margin-top: 0px;
+        position: relative;
+        background-color: rgba(255, 255, 255);
+        padding: 2rem;
+        border-radius: 0px;
+        box-shadow: 0 0px 0px rgba(1, 1, 1, 1);
+        width:fit-content;
+        top: 0px;
+        margin: 0 auto;
+        align-items: center;
+        align-content: space-around;
+    }
+</style>
+<section class="path"><a asp-controller="Home" asp-action="Index">home</a>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
     </svg><a asp-controller="Chambre" asp-action="Index">Explore</a>
 </section>
+<section class="section">
+    <div class="content">
+        <div class="container-search-box">
+            <form asp-controller="Chambre" asp-action="Index"  method="post">
+                <div class="search-box-inputs">
+                    <div class="grids">
+                        <label for="destination" class="form-label">Where do you want to book ?</label>
+                        <input type="text" class="form-control" id="destination" placeholder="Destination, hotel name">
+                    </div>
+                    <div class="grids">
+                        <label for="checkin" class="form-label">Check-In</label>
+                        <input name="checkin" type="date" class="form-control" id="checkin">
+                    </div>
+                    <div class="grids">
+                        <label for="checkout" class="form-label">Check-Out</label>
+                        <input name="checkout" type="date" class="form-control" id="checkout">
+                    </div>
+                    <div class="grids">
+                        <label for="guests" class="form-label">Rooms & Guests</label>
+                        <select name="capacity" id="type" class="form-select">
+                            <!-- <option value="deluxe">Deluxe</option>
+                            <option value="standard">Standard</option>
+                            <option value="suite">Suite</option> -->
+                            <option value="0">--</option>
+                            <option value="1">1 personne</option>
+                            <option value="2">2 personnes</option>
+                            <option value="3">3 personnes</option>
+                            <option value="4">4 personnes</option>
+                            <option value="5">5 personnes ou plus</option>
+                        </select>
+                    </div>
+                    <div class="search-btn">
+                        <button type="submit" class="submit">Search</button>
 
-<!--
-<table class="table">
-    <thead>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NumeroChambre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TypeChambre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Capacite)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PrixParNuit)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Disponibilite)
-        </th>
-        <th></th>
-    </tr>
-    </thead>
-    <tbody>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>
+
+<div class="sections-container">
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumeroChambre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TypeChambre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Capacite)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PrixParNuit)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Disponibilite)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdChambre">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdChambre">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdChambre">Delete</a>
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
--->
-<div class="sections-container">
-@foreach (var item in Model)
-{
-    <div class="sections" >
+        <div class="sections">
 
-        <div class="left">
-            <div class="img-container">
-            </div></div>
-        <div class="right">
-            <div class="title">
-                <h2>@Html.DisplayFor(model => item.TypeChambre)</h2>
+            <div class="left">
+                <div class="img-container">
+                </div></div>
+            <div class="right">
+                <div class="title">
+                    <h2>@Html.DisplayFor(model => item.TypeChambre)</h2>
+                </div>
+
+                <p>@Html.DisplayFor(model => item.Description)</p>
+                <div class="price">
+                    <h2 id="price">@Html.DisplayFor(model => item.PrixParNuit)</h2>
+                    <h5>MAD</h5></div>
+
             </div>
+            <div class="detailsbtn">
+                <a asp-controller="Chambre" asp-action="Details" asp-route-id="@item.IdChambre" method="GET"><button class="details">Details</button></a>
+            </div>
+            <!--<p id="dispo">20 chambres disponibles</p>-->
 
-            <p>@Html.DisplayFor(model => item.Description)</p>
-            <div class="price">
-                <h2 id="price">@Html.DisplayFor(model => item.PrixParNuit)</h2>
-                <h5>MAD</h5></div>
 
         </div>
-        <div class="detailsbtn">
-            <a asp-controller="Chambre" asp-action="Details" asp-route-id="@item.IdChambre" method="GET"><button class="details">Details</button></a>
-        </div>
-        <!--<p id="dispo">20 chambres disponibles</p>-->
-
-
-    </div>
-}
+    }
 </div>
 </body>
 </html>

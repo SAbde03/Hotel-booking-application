@@ -20,10 +20,10 @@ namespace MvcHotelReservation.Controllers
         }
 
         // GET: Utilisateur
-        public async Task<IActionResult> Index()
+        /*public async Task<IActionResult> Index()
         {
             return View(await _context.Utilisateurs.ToListAsync());
-        }
+        }*/
 
         // GET: Utilisateur/Details/5
         public async Task<IActionResult> Details(int? id)

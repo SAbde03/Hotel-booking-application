@@ -18,8 +18,7 @@ namespace MvcHotelReservation.Controllers
         {
             _context = context;
         }
-        [HttpGet]
-        [Route("Chambre/Details/{id?}")]
+       
         public async Task<IActionResult> Payment(int? id)
         {
             if (id == null)

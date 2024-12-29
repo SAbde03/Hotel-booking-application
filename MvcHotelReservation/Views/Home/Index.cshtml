@@ -1,5 +1,4 @@
-﻿@model IEnumerable<MvcHotelReservation.Models.Chambre>;
-<!DOCTYPE html>
+﻿@model List<MvcHotelReservation.Models.Chambre>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -99,7 +98,7 @@
 
 
         <div class="container-search-box">
-            <form asp-controller="Chambre" asp-action="Index"  method="GET">
+            <form asp-controller="Chambre" asp-action="Index"  method="post">
                 <div class="search-box-inputs">
                     <div class="grids">
                         <label for="destination" class="form-label">Where do you want to book ?</label>
@@ -107,18 +106,21 @@
                     </div>
                     <div class="grids">
                         <label for="checkin" class="form-label">Check-In</label>
-                        <input type="date" class="form-control" id="checkin">
+                        <input name="checkin" type="date" class="form-control" id="checkin">
                     </div>
                     <div class="grids">
                         <label for="checkout" class="form-label">Check-Out</label>
-                        <input type="date" class="form-control" id="checkout">
+                        <input name="checkout" type="date" class="form-control" id="checkout">
                     </div>
                     <div class="grids">
                         <label for="guests" class="form-label">Rooms & Guests</label>
-                        <select id="type" class="form-select">
-                                <option value="deluxe">Deluxe</option>
-                                <option value="standard">Standard</option>
-                                <option value="suite">Suite</option>
+                        <select name="capacity" id="type" class="form-select">
+                            <option value="0">--</option>
+                            <option value="1">1 personne</option>
+                            <option value="2">2 personnes</option>
+                            <option value="3">3 personnes</option>
+                            <option value="4">4 personnes</option>
+                            <option value="5">5 personnes ou plus</option>
                             </select>  
                     </div>
                     <div class="search-btn">
