@@ -83,19 +83,10 @@ namespace MvcHotelReservation.Controllers
         }
 
         // GET: Chambre/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id )
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var chambre = await _context.Chambres.FindAsync(id);
-            if (chambre == null)
-            {
-                return NotFound();
-            }
-            return View(chambre);
+            
+            return View();
         }
 
         // POST: Chambre/Edit/5
@@ -169,6 +160,35 @@ namespace MvcHotelReservation.Controllers
         private bool ChambreExists(int id)
         {
             return _context.Chambres.Any(e => e.IdChambre == id);
+        }
+        
+        public async Task<IActionResult> Payment(int id, int? price)
+        {
+            
+            if (price == null || price <= 0)
+            {
+                return BadRequest("Invalid or missing room price.");
+            }
+
+            
+            int? daysDifference = HttpContext.Session.GetInt32("daysDifference");
+            if (daysDifference == null || daysDifference <= 0)
+            {
+                return BadRequest("Days difference is not set or invalid in the session.");
+            }
+            
+            int montant = price.Value * daysDifference.Value;
+            TempData["montant"] = montant;
+            HttpContext.Session.SetInt32("montant",montant);
+            TempData["idChambre"] = id;
+            HttpContext.Session.SetInt32("idChambre",id);
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            
+            return View();
         }
     }
 }

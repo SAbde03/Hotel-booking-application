@@ -5,10 +5,15 @@ public class Utilisateur
 {
     [Key]
     public int idUtilisateur { get; set; }
+    [Required]
     public string nom { get; set; }
+    [Required]
     public string prenom { get; set; }
+    [Required]
     public string email { get; set; }
+    [Required]
     public string motDePasse { get; set; }
+    [Phone]
     public string telephone { get; set; }
     
     public String imagePath { get; set; }

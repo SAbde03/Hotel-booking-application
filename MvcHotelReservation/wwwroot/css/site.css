@@ -41,6 +41,8 @@ body {
   margin-bottom: 60px;
   margin-left: 0;
   margin-right: 0;
+  background-color: #f8f8f8;
+  background:linear-gradient(0deg, #ffffff,#f8f8f8);
 
 }
 
@@ -102,12 +104,12 @@ body {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  width: 300px;
+  width: 350px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: left;
   padding-bottom: 1rem ;
   overflow: hidden;
-  height: 430px;
+  height: 450px;
 }
 
 .room-card img {
@@ -249,14 +251,60 @@ body, html {
   margin: 0;
   padding: 0;
 }
+.item-container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+}
+.logout-container{
+  display: none;
+  z-index: 2999;
+  background-color: #f1f1f1;
+  position: absolute;
+  height: 65px;
+  width: 100px;
+  border-radius: 0.4rem;
+  align-items: center;
+  align-content: center;
+  right: 160px;
+  justify-content: center;
+  z-index: 2;
 
+}
+.logout-container:before {
+  content: "";
+  background-color: #f1f1f1;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  rotate: 45deg;
+  z-index: -2;
+}
+.item-container .btn {
+  height: 20px;
+  width: 90px;
+  top: 0px;
+  z-index: 3000;
+  font-family: font4;
+  
+  background-color: #000000;
+}
+.item-container a{
+  text-decoration: none;
+  
+}
 .navbar .nav-item {
   width:fit-content;
   margin-left: 1rem;
   padding: 5px 10px 5px 10px;
   border-radius: 0.5rem;
 }
-
+.navbar .nav-item img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
 .navbar .nav-link {
   color: #000000;
   text-decoration: none;
@@ -264,7 +312,9 @@ body, html {
   transition: color 0.3s;
   font-family: font4;
 }
-
+.item-container:hover > .logout-container{
+  display: flex;
+}
 
 .profile-icon {
   width: 32px;
@@ -334,7 +384,6 @@ body, html {
   border-radius: 8px;
   margin-top: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 1005px;
   position:absolute;
   top: 350px;
 }
@@ -367,7 +416,7 @@ body, html {
   transition: background-color 0.3s;
   font-family:font2;
   margin-bottom: 15px;
-  padding-left: 10px;
+  padding-right: 20px;
 }
 
 .container-search-box button:hover {
@@ -375,8 +424,13 @@ body, html {
   cursor: pointer;
 }
 
-
-
+.container-search-box .search-btn button{
+  padding-left: 12px;
+}
+.section-title-wrapper img {
+  width: 50px;
+  height: 45px;
+}
 .navbar .nav-item {
   margin-left: 0;
   margin-bottom: 0.5rem;
@@ -408,6 +462,7 @@ body, html {
   background-color: #8c0012;
   color: white;
   transition: background-color 0.3s;
+  padding-left: 30px;
 }
 form{
   width: fit-content;
@@ -682,4 +737,61 @@ footer p {
 }
 .path{
   height: 40px;
+}
+
+.cart  {
+  padding-top: 10px;
+  margin-right: 15px;
+}
+.cart-exist{
+  padding-top: 10px;
+  margin-right: 15px;
+  position: relative;
+}
+.cart-exist::after{
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #b02a37;
+  position: absolute;
+  top: 35px;
+  right: 5px;
+}
+
+.videoSection{
+  display: flex;
+  justify-content: center;
+
+  padding: 20px;
+  align-items: center;
+  align-content: center;
+}
+
+
+@keyframes anim2 {
+  0% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/B6911_~2_13by5.jpg") no-repeat center center/cover;
+    background-size: cover;
+  }
+  20% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/B6911_~2_13by5.jpg") no-repeat center center/cover;
+    background-size: cover;
+  }
+  40% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/Marriott_Starwood_Sale.jpg") no-repeat center center/cover;
+    background-size: cover;
+  }
+  60% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/Marriott_Starwood_Sale.jpg") no-repeat center center/cover;
+    background-size: cover;
+  }
+  80% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/leonardo-1072693-mc-mcowc--mh_mcowc_pool_O-553385.jpg") no-repeat center center/cover;
+    background-size: cover;
+  }
+  100% {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/leonardo-1072693-mc-mcowc--mh_mcowc_pool_O-553385.jpg") no-repeat center center/cover;
+    background-size: cover;
+  }
 }

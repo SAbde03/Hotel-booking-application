@@ -60,6 +60,8 @@ namespace MvcHotelReservation.Controllers
                 if (utilisateur != null)
                 {
                     HttpContext.Session.SetInt32("idClient",utilisateur.idUtilisateur);
+                    HttpContext.Session.SetString("connected", "yes");
+                    HttpContext.Session.SetString("email", utilisateur.email);
                     HttpContext.Session.SetString("FullName", utilisateur.nom + " " + utilisateur.prenom);
                     HttpContext.Session.SetString("imagePath", utilisateur.imagePath);
                     return RedirectToAction("Index", "Home");
@@ -72,17 +74,33 @@ namespace MvcHotelReservation.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> signUp([Bind("nom,prenom,email,motDePasse,telephone")] Utilisateur utilisateur)
+        public async Task<IActionResult> SignUp([Bind("nom,prenom,email,motDePasse,telephone")] Utilisateur utilisateur)
         {
             if (ModelState.IsValid)
             {
-                utilisateur.dateInscription = DateTime.Now; 
-                _context.Add(utilisateur);
+                utilisateur.imagePath="/images/1721270428129.jpeg";
+                utilisateur.dateInscription = DateTime.Now;
+                
+                _context.Utilisateurs.Add(utilisateur);
                 await _context.SaveChangesAsync();
-                //return RedirectToAction(nameof(Index)); 
+                return RedirectToAction(nameof(Index)); 
             }
 
             return RedirectToAction("Index", "Home");
+        }
+        
+        public async Task<string> SaveImageAsync(IFormFile file)
+        {
+            var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
+            var uniqueFileName = Guid.NewGuid().ToString() + "_" + file.FileName;
+            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.CopyToAsync(fileStream);
+            }
+
+            return $"/images/{uniqueFileName}";
         }
             
             
@@ -132,6 +150,12 @@ namespace MvcHotelReservation.Controllers
         public IActionResult Profil()
         {
             return View();
+        }
+
+        public IActionResult logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Home");
         }
     }
     

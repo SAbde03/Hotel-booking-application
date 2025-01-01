@@ -150,6 +150,10 @@ p{
     display: flex;
     
 }
+.price h1{
+    padding-top: 40px;
+    font-size: 25px;
+}
 /*
 .price h2 ,h1{
     color: #ff202a;

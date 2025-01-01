@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MvcHotelReservation.Data;
+using MvcHotelReservation.service;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
@@ -13,7 +14,7 @@ builder.Services.AddSession(options =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ApplicationDbContext>();
-
+builder.Services.AddTransient<IEmailService, EmailService>();
 string _GetConnStringName = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContextPool<ApplicationDbContext>(options =>
     options.UseMySql(_GetConnStringName, ServerVersion.AutoDetect(_GetConnStringName)));

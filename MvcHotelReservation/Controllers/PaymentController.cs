@@ -39,7 +39,7 @@ namespace MvcHotelReservation.Controllers
             TempData["montant"] = montant;
             HttpContext.Session.SetInt32("montant",montant);
             TempData["idChambre"] = id;
-           // HttpContext.Session.SetInt32("idChambre",id);
+           HttpContext.Session.SetInt32("idChambre",id);
         if (id == null)
             {
                 return NotFound();
@@ -51,7 +51,14 @@ namespace MvcHotelReservation.Controllers
             {
                 return NotFound();
             }
+            /* Étape 2 : Marquer la chambre comme réservée
+            chambre.Disponibilite = false;
+            _context.Chambres.Update(chambre);
 
+            // Vous pouvez également effectuer des modifications supplémentaires ici si nécessaire.
+
+            // Sauvegarder les changements
+            _context.SaveChanges();*/
             return View(chambre);
         }
         // GET: Payment

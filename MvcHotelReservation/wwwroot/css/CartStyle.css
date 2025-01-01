@@ -1,0 +1,82 @@
+﻿.table {
+    width: 100%;
+    border-spacing:0px;
+    margin: 20px 0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    margin-bottom: 1000px;
+    border-radius: 10px; 
+    overflow: hidden;
+}
+.table {
+    
+}
+section{
+    padding: 40px;
+}
+table.table thead{
+    -moz-border-radius-topleft:20px;
+    -moz-border-radius-topright:20px;
+}
+table.table thead tr {
+    background-color: #efefef;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}
+
+table.table th {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    
+}
+
+table.table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+table.table tbody tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s;
+    border-bottom: #dddddd solid 0.1px;
+}
+
+table.table td {
+    padding: 10px 15px;
+    border: 0px solid #ddd;
+    vertical-align: middle;
+}
+
+table.table tbody td.text-center {
+    text-align: center;
+    font-style: italic;
+    color: #6c757d;
+}
+
+table.table a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+table.table a.text-danger {
+    color: #dc3545;
+}
+
+table.table a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    table.table th,
+    table.table td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}
+#deteleCell{
+    border-left: #dddddd solid 0.1px;
+}

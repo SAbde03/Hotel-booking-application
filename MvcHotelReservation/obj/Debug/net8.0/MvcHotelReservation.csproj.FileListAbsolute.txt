@@ -609,3 +609,7 @@ C:\Users\golde\RiderProjects\MvcHotelReservation\MvcHotelReservation\bin\Debug\n
 C:\Users\golde\RiderProjects\MvcHotelReservation\MvcHotelReservation\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\golde\RiderProjects\MvcHotelReservation\MvcHotelReservation\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\golde\RiderProjects\MvcHotelReservation\MvcHotelReservation\bin\Debug\net8.0\SystemWeb.dll
+C:\Users\golde\RiderProjects\MvcHotelReservation\MvcHotelReservation\bin\Debug\net8.0\MailKit.dll
+C:\Users\golde\RiderProjects\MvcHotelReservation\MvcHotelReservation\bin\Debug\net8.0\MimeKit.dll
+C:\Users\golde\RiderProjects\MvcHotelReservation\MvcHotelReservation\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\golde\RiderProjects\MvcHotelReservation\MvcHotelReservation\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

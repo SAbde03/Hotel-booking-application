@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\MAR-5124f716.ico"
     },
     {
+      "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\css\\CartStyle.css",
+      "PackagePath": "staticwebassets\\css\\CartStyle.css"
+    },
+    {
       "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\css\\Index.css",
       "PackagePath": "staticwebassets\\css\\Index.css"
     },
@@ -81,8 +85,16 @@
       "PackagePath": "staticwebassets\\images\\Marriott-International-Logo-500x281.png"
     },
     {
+      "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\Marriott_Starwood_Sale.jpg",
+      "PackagePath": "staticwebassets\\images\\Marriott_Starwood_Sale.jpg"
+    },
+    {
       "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\atr.royalmansion-majlis-mr.jpg",
       "PackagePath": "staticwebassets\\images\\atr.royalmansion-majlis-mr.jpg"
+    },
+    {
+      "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\leonardo-1072693-mc-mcowc--mh_mcowc_pool_O-553385.jpg",
+      "PackagePath": "staticwebassets\\images\\leonardo-1072693-mc-mcowc--mh_mcowc_pool_O-553385.jpg"
     },
     {
       "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\logo.png",

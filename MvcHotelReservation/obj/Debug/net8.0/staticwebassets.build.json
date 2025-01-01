@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I4j5plRc33ynqLfioF1DHtBGcqF6eLEZlqTX6l4NWTk=",
+  "Hash": "eSmn1x0LiO0oFpncIC1f2grPmNaE1D+o0nfsM264je8=",
   "Source": "MvcHotelReservation",
   "BasePath": "_content/MvcHotelReservation",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MvcHotelReservation.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\css\\CartStyle.css",
+      "SourceId": "MvcHotelReservation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\",
+      "BasePath": "_content/MvcHotelReservation",
+      "RelativePath": "css/CartStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\CartStyle.css"
     },
     {
       "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\css\\fonts\\interstate-black-cond-58b642507872b.otf",
@@ -359,6 +378,25 @@
       "OriginalItemSpec": "wwwroot\\images\\B6911_~2_13by5.jpg"
     },
     {
+      "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\leonardo-1072693-mc-mcowc--mh_mcowc_pool_O-553385.jpg",
+      "SourceId": "MvcHotelReservation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\",
+      "BasePath": "_content/MvcHotelReservation",
+      "RelativePath": "images/leonardo-1072693-mc-mcowc--mh_mcowc_pool_O-553385.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\leonardo-1072693-mc-mcowc--mh_mcowc_pool_O-553385.jpg"
+    },
+    {
       "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\logo.png",
       "SourceId": "MvcHotelReservation",
       "SourceType": "Discovered",
@@ -395,6 +433,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\MAR-5124f716.png"
+    },
+    {
+      "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\Marriott_Starwood_Sale.jpg",
+      "SourceId": "MvcHotelReservation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\",
+      "BasePath": "_content/MvcHotelReservation",
+      "RelativePath": "images/Marriott_Starwood_Sale.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Marriott_Starwood_Sale.jpg"
     },
     {
       "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\Marriott-International-Logo-500x281.png",

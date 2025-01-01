@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mariotte</title>
-    <link rel="stylesheet" href="/css/site.css"/>
+    <link rel="stylesheet" href="~/css/site.css"/>
     
     <style>
         .section {
@@ -17,7 +17,7 @@
             padding: 4rem 0;
             height: 100%;
             height: 500px;
-            
+            animation: anim2 40s ease-in-out;
         }
         
     </style>
@@ -97,20 +97,20 @@
         <p class="lead">You came here for a reason.</p>
 
 
-        <div class="container-search-box">
+        <div class="container-search-box" style="width: 980px">
             <form asp-controller="Chambre" asp-action="Index"  method="post">
                 <div class="search-box-inputs">
                     <div class="grids">
                         <label for="destination" class="form-label">Where do you want to book ?</label>
-                        <input type="text" class="form-control" id="destination" placeholder="Destination, hotel name">
+                        <input type="text" class="form-control" id="destination" placeholder="Destination, hotel name" style="width: 250px">
                     </div>
                     <div class="grids">
                         <label for="checkin" class="form-label">Check-In</label>
-                        <input name="checkin" type="date" class="form-control" id="checkin">
+                        <input name="checkin" type="date" class="form-control" id="checkin" required>
                     </div>
                     <div class="grids">
                         <label for="checkout" class="form-label">Check-Out</label>
-                        <input name="checkout" type="date" class="form-control" id="checkout">
+                        <input name="checkout" type="date" class="form-control" id="checkout" required>
                     </div>
                     <div class="grids">
                         <label for="guests" class="form-label">Rooms & Guests</label>
@@ -137,7 +137,7 @@
 <div class="Container-2">
     <div class="section-title-wrapper">
         <hr>
-        <h3 class="section-title"></h3>
+        <img src="/images/MAR-5124f716.png" alt="Hotel Reservation">
         <hr>
     </div>
     <section class="rooms-grid">
@@ -164,7 +164,17 @@
             <p>A cozy and affordable option with all the essentials for a pleasant stay. Starting at $100/night.</p>
             <button>View Details</button>
         </div>
+        <!-- Room 4 -->
+        <div class="room-card">
+            <img src="images/room_standard_1.jpg" alt="Standard Room">
+            <h3>Standard Room</h3>
+            <p>A cozy and affordable option with all the essentials for a pleasant stay. Starting at $100/night.</p>
+            <button>View Details</button>
+        </div>
 
+    </section>
+    <section class="videoSection">
+        <iframe width="700" height="515" src="https://www.youtube.com/embed/HakxGMQ1OJY?si=8Rbp0UeutamKePzC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
 </div>
 
