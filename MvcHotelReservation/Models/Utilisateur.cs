@@ -13,7 +13,7 @@ public class Utilisateur
     public string email { get; set; }
     [Required]
     public string motDePasse { get; set; }
-    [Phone]
+    [Required]
     public string telephone { get; set; }
     
     public String imagePath { get; set; }

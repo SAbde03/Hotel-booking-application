@@ -78,9 +78,8 @@ namespace MvcHotelReservation.Controllers
         {
             if (ModelState.IsValid)
             {
-                utilisateur.imagePath="/images/1721270428129.jpeg";
+                utilisateur.imagePath="/images/profile-icon-design-free-vector.jpg";
                 utilisateur.dateInscription = DateTime.Now;
-                
                 _context.Utilisateurs.Add(utilisateur);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index)); 
