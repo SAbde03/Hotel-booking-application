@@ -82,7 +82,6 @@ namespace MvcHotelReservation.Controllers
                 utilisateur.dateInscription = DateTime.Now;
                 _context.Utilisateurs.Add(utilisateur);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index)); 
             }
 
             return RedirectToAction("Index", "Home");

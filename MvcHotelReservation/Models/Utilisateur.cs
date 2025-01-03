@@ -16,7 +16,7 @@ public class Utilisateur
     [Required]
     public string telephone { get; set; }
     
-    public String imagePath { get; set; }
+    public String? imagePath{ get; set; }
     public DateTime dateInscription { get; set; } = DateTime.Now;
     
     public Utilisateur() { }

@@ -101,6 +101,10 @@
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
+      "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\pdt-App-Hero-QRCode-EN1541865-170785521063833.png",
+      "PackagePath": "staticwebassets\\images\\pdt-App-Hero-QRCode-EN1541865-170785521063833.png"
+    },
+    {
       "Id": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\profile-icon-design-free-vector.jpg",
       "PackagePath": "staticwebassets\\images\\profile-icon-design-free-vector.jpg"
     },

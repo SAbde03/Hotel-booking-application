@@ -41,8 +41,8 @@ body {
   margin-bottom: 60px;
   margin-left: 0;
   margin-right: 0;
-  background-color: #f8f8f8;
-  background:linear-gradient(0deg, #ffffff,#f8f8f8);
+
+
 
 }
 
@@ -737,6 +737,7 @@ footer p {
 }
 .path{
   height: 40px;
+  padding-top: 10px;
 }
 
 .cart  {

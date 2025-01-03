@@ -7,7 +7,7 @@ public class Reservation
     public int IdReservation { get; set; }
     public DateTime? DateDebut { get; set; }
     public DateTime? DateFin { get; set; }
-    public string Statut { get; set; } = "en attente"; // "confirmée", "en attente", "annulée"
+    public string Statut { get; set; } = "Confirmed"; // "confirmée", "en attente", "annulée"
     public int MontantTotal { get; set; }
     public DateTime DateReservation { get; set; } = DateTime.Now;
 
