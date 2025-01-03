@@ -42,34 +42,18 @@ function showSignUp() {
     popupTitle.textContent = 'Sign Up';
     toggleLink.innerHTML = "Already have an account? <a onclick='toggleForm()'>Login</a>";
 }
-let count = 0;
-let price = 0;
-localStorage.setItem('counter', count);
-function Increment() {
-    count = parseInt(localStorage.getItem('counter')) || 0;
-    count++;
-    localStorage.setItem('counter', count);
-    document.getElementById("counter").value = count;
-    //updatePrice();
-}
-function Decrement() {
-    count = parseInt(localStorage.getItem('counter')) || 0;
-    if(count>0){
-        count--;
-    }
-    
-    localStorage.setItem('counter', count);
-    document.getElementById("counter").value = count;
-    
-    //updatePrice();
-}
-/*
-function updatePrice() {
-    let price = parseInt(document.getElementById("price").value) ; // Get the price value
-    let count = parseInt(document.getElementById("counter").value); // Get the counter value
-    let total = price * count; // Calculate the total price
-    document.getElementById("price").innerHTML = total; // Update the price display
-    localStorage.setItem('price', total); // Optionally store the total price in localStorage
-}
-*/
+
 overlay.addEventListener('click', closePopup);
+
+function handleSignup(Event) {
+    Event.preventDefault();
+    let signupSuccess = true;
+
+    if (signupSuccess) {
+        const messageBox = document.getElementById("messageBox");
+        messageBox.classList.add("show");
+        setTimeout(() => {
+            messageBox.classList.remove("show");
+        }, 5000); 
+    }
+}

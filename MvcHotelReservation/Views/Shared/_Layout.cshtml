@@ -16,7 +16,9 @@
 <body>
 
 <header>
-    
+    <div id="messageBox" class="message-box">
+        Signup successful!
+    </div>
     <nav class="navbar">
         <div class="container">
             <div class="navbar-brand">
@@ -91,7 +93,7 @@
                     <button type="submit">Login</button>
                 </form>
                 <!-- Sign-Up Form -->
-                <form id="signup-form" style="display: none;" asp-action="SignUp" asp-controller="Account" method="post">
+                <form id="signup-form" style="display: none;" asp-action="SignUp" asp-controller="Account" method="post" onsubmit="handleSignup(Event)">
                     <input name="nom" type="text" placeholder="Nom" required>
                     <input name="prenom" type="text" placeholder="Prenom" required>
                     <input name="email" type="email" placeholder="email" required>

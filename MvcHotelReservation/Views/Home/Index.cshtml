@@ -141,7 +141,16 @@
         <hr>
     </div>
     <section class="rooms-grid">
-        <!-- Room 1 -->
+        @foreach(var item in Model)
+        {
+            <div class="room-card">
+                <img src="images/atr.royalmansion-majlis-mr.jpg" alt="Deluxe Room">
+                <h3>@Html.DisplayFor(model => item.TypeChambre)</h3>
+                <p>@Html.DisplayFor(model => item.Description)</p>
+                <button>View Details</button>
+            </div>
+        }
+        <!-- Room 1 
         <div class="room-card">
             <img src="images/atr.royalmansion-majlis-mr.jpg" alt="Deluxe Room">
             <h3>Deluxe Room</h3>
@@ -149,7 +158,6 @@
             <button>View Details</button>
         </div>
 
-        <!-- Room 2 -->
         <div class="room-card">
             <img src="images/the-amayaa.jpg" alt="Suite">
             <h3>Suite</h3>
@@ -157,21 +165,19 @@
             <button>View Details</button>
         </div>
 
-        <!-- Room 3 -->
         <div class="room-card">
             <img src="images/room_standard_1.jpg" alt="Standard Room">
             <h3>Standard Room</h3>
             <p>A cozy and affordable option with all the essentials for a pleasant stay. Starting at $100/night.</p>
             <button>View Details</button>
         </div>
-        <!-- Room 4 -->
         <div class="room-card">
             <img src="images/room_standard_1.jpg" alt="Standard Room">
             <h3>Standard Room</h3>
             <p>A cozy and affordable option with all the essentials for a pleasant stay. Starting at $100/night.</p>
             <button>View Details</button>
         </div>
-
+        -->
     </section>
     <section class="videoSection">
         <iframe width="700" height="515" src="https://www.youtube.com/embed/HakxGMQ1OJY?si=8Rbp0UeutamKePzC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

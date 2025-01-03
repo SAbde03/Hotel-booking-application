@@ -41,11 +41,35 @@ body {
   margin-bottom: 60px;
   margin-left: 0;
   margin-right: 0;
-
-
-
+}
+.message-box {
+  display: none; 
+  background-color:white ;
+  color: #000000;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.57);
+  text-align: center;
+  position:absolute;
+  top: 0px;
+  left: 600px;
+  z-index: 6000;
 }
 
+.show {
+  display: block;
+  z-index: 6000;
+  animation: fadeIn 1s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes anim{
 
 
@@ -96,8 +120,12 @@ body {
 .rooms-grid {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 3rem;
   flex-wrap: wrap;
+  height: fit-content;
+  padding-left: 50px;
+  padding-right: 50px;
+  
 }
 
 .room-card {
@@ -110,8 +138,12 @@ body {
   padding-bottom: 1rem ;
   overflow: hidden;
   height: 450px;
+  transition: transform 0.3s ease-in-out;
+  margin: 15px;
 }
-
+.room-card:hover {
+  transform: scale(1.05);
+}
 .room-card img {
   width: 100%;
   height: 230px;
@@ -129,6 +161,7 @@ body {
 
 .room-card p {
   padding-left: 1rem;
+  padding-right: 0.5rem;
   font-size: 0.9rem;
   color: #666;
   height: 80px;
