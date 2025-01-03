@@ -124,7 +124,7 @@
                             </select>  
                     </div>
                     <div class="search-btn">
-                        <button type="submit" class="submit">Search</button>
+                        <button type="submit" >Search</button>
                         
                     </div>
                 </div>
@@ -144,7 +144,7 @@
         @foreach(var item in Model)
         {
             <div class="room-card">
-                <img src="images/atr.royalmansion-majlis-mr.jpg" alt="Deluxe Room">
+                <img src="@Html.DisplayFor(model => item.ImagePath)" alt="Deluxe Room">
                 <h3>@Html.DisplayFor(model => item.TypeChambre)</h3>
                 <p>@Html.DisplayFor(model => item.Description)</p>
                 <button>View Details</button>

@@ -71,7 +71,7 @@ namespace MvcHotelReservation.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdChambre,NumeroChambre,TypeChambre,Capacite,PrixParNuit,Description,Disponibilite")] Chambre chambre)
+        public async Task<IActionResult> Create([Bind("IdChambre,NumeroChambre,TypeChambre,Capacite,PrixParNuit,Description,Disponibilite,Path")] Chambre chambre)
         {
             if (ModelState.IsValid)
             {

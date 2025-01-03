@@ -137,7 +137,7 @@ body {
   text-align: left;
   padding-bottom: 1rem ;
   overflow: hidden;
-  height: 450px;
+  height: 400px;
   transition: transform 0.3s ease-in-out;
   margin: 15px;
 }
@@ -457,9 +457,6 @@ body, html {
   cursor: pointer;
 }
 
-.container-search-box .search-btn button{
-  padding-left: 12px;
-}
 .section-title-wrapper img {
   width: 50px;
   height: 45px;
@@ -801,7 +798,6 @@ footer p {
   align-items: center;
   align-content: center;
 }
-
 
 @keyframes anim2 {
   0% {

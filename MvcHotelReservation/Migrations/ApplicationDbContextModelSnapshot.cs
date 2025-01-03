@@ -40,6 +40,10 @@ namespace MvcHotelReservation.Migrations
                     b.Property<bool>("Disponibilite")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("NumeroChambre")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -111,14 +115,8 @@ namespace MvcHotelReservation.Migrations
                     b.Property<DateTime>("DateReservation")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int?>("IdChambre")
+                    b.Property<int>("MontantTotal")
                         .HasColumnType("int");
-
-                    b.Property<int?>("IdUtilisateur")
-                        .HasColumnType("int");
-
-                    b.Property<decimal?>("MontantTotal")
-                        .HasColumnType("decimal(65,30)");
 
                     b.Property<string>("Statut")
                         .IsRequired()
@@ -152,7 +150,6 @@ namespace MvcHotelReservation.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("imagePath")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("motDePasse")

@@ -14,6 +14,7 @@ public class Reservation
     public Utilisateur Utilisateur { get; set; }
     [Key]
     public Chambre Chambre { get; set; }
+    
 
     public Reservation(){}
     public Reservation(DateTime dateDebut, DateTime dateFin, int? montant, Utilisateur utilisateur, Chambre chambre)
