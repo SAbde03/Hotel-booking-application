@@ -141,7 +141,7 @@
         <hr>
     </div>
     <section class="rooms-grid">
-        @foreach(var item in Model)
+        @foreach(var item in Model.Distinct())
         {
             <div class="room-card">
                 <img src="@Html.DisplayFor(model => item.ImagePath)" alt="Deluxe Room">
@@ -179,6 +179,7 @@
         </div>
         -->
     </section>
+   
     <section class="videoSection">
         <iframe width="700" height="515" src="https://www.youtube.com/embed/HakxGMQ1OJY?si=8Rbp0UeutamKePzC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>

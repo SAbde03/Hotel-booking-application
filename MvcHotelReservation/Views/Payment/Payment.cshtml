@@ -52,7 +52,7 @@
                 </svg>@Html.DisplayFor(model => model.Capacite) guests <br/></div>
             <div class="room">
                 <div class="image">
-                    <img src="/images/room_standard_1.jpg" alt="room"/></div>
+                    <img src="@Html.DisplayFor(model => model.ImagePath)" alt="room"/></div>
                 <div class="description">
                     <h2 class="title">@Html.DisplayFor(model => model.TypeChambre)</h2>
                     <p>@Html.DisplayFor(model => model.Description)</p>
@@ -74,16 +74,15 @@
             <div class="price">
                 <h2 id="title1">Amount</h2>
                 <div class="prix">
-                    <h2>@HttpContextAccessor.HttpContext.Session.GetInt32("montant")</h2>
-
+                    <h2>@HttpContextAccessor.HttpContext.Session.GetInt32("montant")<h5>MAD</h5></h2>
                 </div>
             </div>
         </div>
         <div class="paymentForm">
-            <h1>Reservation Details</h1>
+            <h1>Payment</h1>
             <form asp-controller="Reservation" asp-action="Create" method="POST">
                 <label for="cardName">Email</label><br>
-                <input type="text" id="Email" name="Email" placeholder="Enter cardholder's name" required><br><br>
+                <input type="text" id="Email" name="Email" value="@HttpContextAccessor.HttpContext.Session.GetString("email")" disabled><br><br>
                 <!-- Cardholder Name -->
                 <label for="cardName">Cardholder Name</label><br>
                 <input type="text" id="cardName" name="cardName" placeholder="Enter cardholder's name" required><br><br>

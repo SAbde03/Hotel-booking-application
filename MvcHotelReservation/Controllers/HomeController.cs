@@ -17,8 +17,10 @@ namespace MvcHotelReservation.Controllers
        
         public async Task<IActionResult> Index()
         {
-            
-            return View(await _context.Chambres.ToListAsync());
+            var distinctRooms = _context.Chambres.GroupBy(r => r.TypeChambre)
+                .Select(g => g.First())
+                .ToList();
+            return View(distinctRooms);
         }
 
         

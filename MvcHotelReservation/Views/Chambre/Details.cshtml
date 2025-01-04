@@ -57,9 +57,12 @@
     <link rel="stylesheet" href="/wwwroot/css/Visualisation.css"/>
 </head>
 <body>
-<section class="path"><a asp-controller="Home" asp-action="Index">home</a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+<div class="overlay2" id="overlay2"></div>
+<section class="path"><a asp-controller="Home" asp-action="Index">home</a>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-    </svg><a asp-controller="Chambre" asp-action="Index" method="post">Explore</a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+    </svg><a asp-controller="Chambre" asp-action="Index" >Explore</a>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
     </svg><a asp-controller="Chambre" asp-action="Details"><b>@Html.DisplayFor(model => model.TypeChambre)</b></a>
 </section>
@@ -67,17 +70,22 @@
 <section>
 
     <div class="left">
-        <div class="img-container">
+
+        <div class="img-container" id="img-container" onclick="openImage()">
+            <img src="@Html.DisplayFor(model => model.ImagePath)"/>
             <div class="btnContainer"><button></button><button></button><button></button></div>
-        </div></div>
+        </div>
+
+    </div>
     <div class="right">
         <div class="title">
             <h2>@Html.DisplayFor(model => model.TypeChambre)</h2>
-            <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-star" viewBox="0 0 16 16">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-star" viewBox="0 0 16 16">
                     <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
                 </svg></button>
         </div>
-        <div class="links"><a><button>holding</button></a><a><button>holding</button></a><a><button>holding</button></a><a><button>holding</button></a><a><button>holding</button></a></div>
+        <div class="links"><a><button>Sea View</button></a><a><button>Jacuzzi</button></a><a><button>Smart TV</button></a><a><button>Sofa Bed</button></a><a><button>Balcony</button></a></div>
         <p>@Html.DisplayFor(model => model.Description)</p>
         <div class="price">
             <h2 id="price">@Html.DisplayFor(model => model.PrixParNuit)</h2>
@@ -85,20 +93,21 @@
         <div class="btn"></div>
         <div class="submit">
             <!-- <div class="counter">
-                 <button onclick="Decrement()">
-                     <div>
-                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
-                             <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
-                         </svg></div></button><input id="counter" value="0" class="count"/>
-                 <button onclick="Increment()">
-                     <div>
-                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                             <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                         </svg></div></button></div> -->
-             <div class="Book"><a asp-controller="Payment" asp-action="Payment" asp-route-id="@Model.IdChambre" asp-route-price="@Model.PrixParNuit">
-                     <button>Book</button></a></div>
-         </div>
-         <!--<p id="dispo">20 chambres disponibles</p>-->
+                <button onclick="Decrement()">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
+                        </svg></div></button><input id="counter" value="0" class="count"/>
+                <button onclick="Increment()">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                        </svg></div></button></div> -->
+            <div class="Book">
+                <a asp-controller="Payment" asp-action="Payment" asp-route-id="@Model.IdChambre" asp-route-price="@Model.PrixParNuit">
+                    <button>Book</button></a></div>
+        </div>
+        <!--<p id="dispo">20 chambres disponibles</p>-->
     </div>
 
 </section>

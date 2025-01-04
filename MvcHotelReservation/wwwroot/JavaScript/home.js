@@ -1,9 +1,14 @@
 ﻿const popup = document.getElementById('popup');
 const overlay = document.getElementById('overlay');
+const overlay2 = document.getElementById('overlay2');
 const loginForm = document.getElementById('login-form');
 const signupForm = document.getElementById('signup-form');
 const popupTitle = document.getElementById('popup-title');
 const toggleLink = document.getElementById('toggle-link');
+
+
+
+
 
 function openPopup(defaultPage) {
     popup.classList.add('active');
@@ -44,7 +49,7 @@ function showSignUp() {
 }
 
 overlay.addEventListener('click', closePopup);
-
+/*
 function handleSignup(Event) {
     Event.preventDefault();
     let signupSuccess = true;
@@ -56,4 +61,4 @@ function handleSignup(Event) {
             messageBox.classList.remove("show");
         }, 5000); 
     }
-}
+}*/

@@ -47,6 +47,7 @@
     border-right: solid 0.1px #cdcdcd;
     padding: 30px;
     padding-top: 80px;
+    background-color: rgba(246, 246, 246, 0.52);
 }
 .check-in-out {
 display: flex;
@@ -58,7 +59,6 @@ display: flex;
     padding: 20px;
     padding-left: 40px;
     padding-top: 30px;
-    box-shadow:  4px 6px 0 0 rgba(0.1, 0.1, 0.1, 0.1);
 }
 .paymentForm .submit{
     background-color: #008080;
@@ -80,6 +80,7 @@ input {
     padding-left: 20px;
     margin-bottom: 20px;
     margin-top: 5px;
+    padding-right: 10px;
 }
 h1{
     margin-bottom: 50px;
@@ -112,6 +113,10 @@ h1{
 .check-in{
     
     padding-right: 20px;
+}
+.price .prix{
+    display: flex;
+    flex-direction: row;
 }
 .price{
     display: flex;
@@ -157,4 +162,7 @@ label{
 }
 .path{
     height: 60px;
+}
+h5{
+    padding-top: 55px;
 }
