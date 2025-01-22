@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "htwknlR/l8dUFDC4Lxdz0gKZejH2z9bDHr4PwEdBsYQ=",
+  "Hash": "5fYqZSJgDgPT4xZ+b677oLAE8qBAE5GdIVRhC9TQMiM=",
   "Source": "MvcHotelReservation",
   "BasePath": "_content/MvcHotelReservation",
   "Mode": "Default",
@@ -319,25 +319,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
-    },
-    {
-      "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\1721270428129.jpeg",
-      "SourceId": "MvcHotelReservation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\",
-      "BasePath": "_content/MvcHotelReservation",
-      "RelativePath": "images/1721270428129.jpeg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\1721270428129.jpeg"
     },
     {
       "Identity": "C:\\Users\\golde\\RiderProjects\\MvcHotelReservation\\MvcHotelReservation\\wwwroot\\images\\20165319-4a072180-9f19-4240-8ff1-e94279ffcace.jpg",

@@ -33,7 +33,8 @@ namespace MvcHotelReservation.Controllers
             ViewData["daysDifference"] = daysDifference;
                 HttpContext.Session.SetInt32("daysDifference",daysDifference);
             var availableRooms = await _context.Chambres
-                .Where(c => c.Disponibilite == true && c.Capacite>=capacity).OrderBy(PrixParNuit => PrixParNuit)
+                .Where(c => c.Disponibilite == true && c.Capacite>=capacity).OrderBy(PrixParNuit => PrixParNuit).GroupBy(r => r.TypeChambre)
+                .Select(g => g.First())
                 .ToListAsync();
             return View(availableRooms);
 
@@ -41,7 +42,7 @@ namespace MvcHotelReservation.Controllers
         }
         
     
-        // GET: Chambre/Details/5
+        // GET: Chambre/Details
         [Route("Chambre/Details/{id?}")]
         public async Task<IActionResult> Details(int? id)
         {

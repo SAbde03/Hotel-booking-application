@@ -372,7 +372,7 @@ body, html {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  padding: 1.6rem 0rem 1.6rem 0rem ;
+  padding: 1.6rem 0.5rem 1.6rem 0rem ;
   border-radius: 10px;
 }
 .navbar button svg {
@@ -493,7 +493,7 @@ body, html {
   background-color: #8c0012;
   color: white;
   transition: background-color 0.3s;
-  padding-left: 30px;
+  
 }
 form{
   width: fit-content;
@@ -825,4 +825,8 @@ footer p {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/leonardo-1072693-mc-mcowc--mh_mcowc_pool_O-553385.jpg") no-repeat center center/cover;
     background-size: cover;
   }
+}
+
+.container-check h1{
+  font-family: font2;
 }
