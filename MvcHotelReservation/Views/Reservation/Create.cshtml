@@ -1,0 +1,64 @@
+@model MvcHotelReservation.Models.Reservation
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html lang="">
+<head>
+    <link rel="stylesheet" href="/css/site.css">
+    <title></title>
+</head>
+<body>
+<div class="container-check"></div>
+<h1>Check your email</h1>
+</body>
+</html>
+
+<!--
+
+
+
+<h4>Reservation</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form >
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                
+            <div class="form-group">
+                <label asp-for="DateDebut" class="control-label"></label>
+                <input asp-for="DateDebut" class="form-control" />
+                <span asp-validation-for="DateDebut" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateFin" class="control-label"></label>
+                <input asp-for="DateFin" class="form-control" />
+                <span asp-validation-for="DateFin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Statut" class="control-label"></label>
+                <input asp-for="Statut" class="form-control" />
+                <span asp-validation-for="Statut" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MontantTotal" class="control-label"></label>
+                <input asp-for="MontantTotal" class="form-control" />
+                <span asp-validation-for="MontantTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateReservation" class="control-label"></label>
+                <input asp-for="DateReservation" class="form-control" />
+                <span asp-validation-for="DateReservation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
